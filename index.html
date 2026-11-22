@@ -1,0 +1,1878 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>笔盒官网入口 - 桌面收纳品牌 | 每一格都有归属</title>
+<meta name="description" content="笔盒官网入口（Daybox）是专注桌面收纳与文具整理的原创品牌官方网站，提供笔盒、桌面收纳、办公文具等精品内容与视频节目，持续为创意工作者打造有秩序的桌面。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f4efe6'/%3E%3Crect x='14' y='20' width='36' height='26' rx='4' fill='%230f172a'/%3E%3Crect x='18' y='24' width='28' height='4' rx='2' fill='%23f4efe6'/%3E%3Ccircle cx='46' cy='18' r='7' fill='%230ea5a0'/%3E%3C/svg%3E">
+<style>
+:root{
+  --by-ink:#0f172a;
+  --by-ink-soft:#2a3550;
+  --by-paper:#f4efe6;
+  --by-paper-2:#fbf9f4;
+  --by-teal:#0ea5a0;
+  --by-teal-deep:#077d78;
+  --by-amber:#e8a33d;
+  --by-line:#ddd5c7;
+  --by-muted:#6b7185;
+  --by-white:#ffffff;
+  --by-radius:16px;
+  --by-shadow:0 10px 30px rgba(15,23,42,.08);
+  --by-shadow-lg:0 20px 50px rgba(15,23,42,.14);
+  --by-head-h:0px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:132px}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--by-paper);
+  color:var(--by-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+h1,h2,h3,h4{margin:0;line-height:1.28;font-weight:800;letter-spacing:.5px}
+p{margin:0 0 1em}
+ul,ol{margin:0;padding:0;list-style:none}
+
+.by-wrap{width:min(1180px,92vw);margin:0 auto}
+
+/* ============ 吸顶：公告条 + 页头 ============ */
+.by-sticky-top{position:sticky;top:0;z-index:60}
+.by-announce{
+  background:var(--by-ink);
+  color:var(--by-paper);
+  font-size:13.5px;
+  letter-spacing:.3px;
+}
+.by-announce-inner{
+  display:flex;align-items:center;gap:14px;
+  padding:9px 0;
+  flex-wrap:wrap;
+}
+.by-announce-tag{
+  background:var(--by-teal);color:#04211f;font-weight:800;
+  padding:2px 9px;border-radius:6px;font-size:12px;white-space:nowrap;
+}
+.by-announce-text{flex:1;min-width:200px;color:#d8d2c6}
+.by-announce-text b{color:var(--by-amber);font-weight:700}
+.by-announce-link{
+  color:var(--by-teal);font-weight:700;font-size:12.5px;white-space:nowrap;
+  border-bottom:1px dashed rgba(14,165,160,.55);
+}
+.by-announce-link:hover{color:#7fe7e2}
+
+.by-header{
+  background:rgba(251,249,244,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--by-line);
+  box-shadow:0 6px 18px rgba(15,23,42,.05);
+}
+.by-header-inner{
+  display:flex;align-items:center;gap:18px;
+  padding:12px 0;min-height:66px;
+}
+.by-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.by-logo-mark{
+  width:38px;height:38px;border-radius:11px;background:var(--by-ink);
+  display:grid;place-items:center;position:relative;flex-shrink:0;
+}
+.by-logo-mark::before{
+  content:"";width:20px;height:12px;border-radius:3px;background:var(--by-paper);
+  position:absolute;top:14px;left:9px;
+}
+.by-logo-mark::after{
+  content:"";width:8px;height:8px;border-radius:50%;background:var(--by-teal);
+  position:absolute;top:7px;right:7px;
+}
+.by-logo-text{display:flex;flex-direction:column;line-height:1.15}
+.by-logo-name{font-weight:900;font-size:18px;letter-spacing:1px}
+.by-logo-sub{font-size:10.5px;color:var(--by-muted);letter-spacing:2.4px}
+.by-nav{display:flex;align-items:center;gap:4px;margin-left:18px;flex:1}
+.by-nav a{
+  padding:7px 11px;border-radius:8px;font-size:14.5px;font-weight:600;color:var(--by-ink-soft);
+  transition:background .2s,color .2s;
+}
+.by-nav a:hover,.by-nav a.by-nav-active{background:rgba(14,165,160,.12);color:var(--by-teal-deep)}
+.by-header-tools{display:flex;align-items:center;gap:10px;margin-left:auto}
+.by-search{
+  display:flex;align-items:center;gap:6px;
+  background:var(--by-white);border:1px solid var(--by-line);border-radius:99px;
+  padding:5px 6px 5px 14px;transition:border-color .2s,box-shadow .2s;
+}
+.by-search:focus-within{border-color:var(--by-teal);box-shadow:0 0 0 3px rgba(14,165,160,.16)}
+.by-search input{
+  border:0;outline:0;background:transparent;font-size:13.5px;width:150px;color:var(--by-ink);
+}
+.by-search button{
+  border:0;background:var(--by-ink);color:var(--by-paper);border-radius:99px;
+  padding:5px 13px;font-size:12.5px;font-weight:700;
+}
+.by-search button:hover{background:var(--by-teal-deep)}
+.by-nav-toggle{
+  display:none;border:1px solid var(--by-line);background:var(--by-white);
+  border-radius:9px;width:40px;height:38px;align-items:center;justify-content:center;
+}
+.by-nav-toggle span{display:block;width:18px;height:2px;background:var(--by-ink);position:relative}
+.by-nav-toggle span::before,.by-nav-toggle span::after{
+  content:"";position:absolute;left:0;width:18px;height:2px;background:var(--by-ink);
+}
+.by-nav-toggle span::before{top:-6px}
+.by-nav-toggle span::after{top:6px}
+
+/* ============ 通用 ============ */
+.by-section{padding:64px 0}
+.by-section-tight{padding:44px 0}
+.by-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;font-weight:800;letter-spacing:2px;color:var(--by-teal-deep);
+  text-transform:uppercase;margin-bottom:12px;
+}
+.by-eyebrow::before{content:"";width:22px;height:3px;border-radius:2px;background:var(--by-teal)}
+.by-h2{font-size:clamp(24px,3vw,34px);margin-bottom:12px}
+.by-h2 em{font-style:normal;color:var(--by-teal-deep)}
+.by-lead{color:var(--by-muted);font-size:15.5px;max-width:760px}
+.by-tag{
+  display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:99px;
+  background:rgba(14,165,160,.12);color:var(--by-teal-deep);white-space:nowrap;
+}
+.by-tag-amber{background:rgba(232,163,61,.18);color:#9a6300}
+.by-tag-ink{background:rgba(15,23,42,.08);color:var(--by-ink-soft)}
+.by-btn{
+  display:inline-flex;align-items:center;gap:8px;border:0;
+  padding:11px 22px;border-radius:99px;font-weight:800;font-size:14.5px;
+  background:var(--by-ink);color:var(--by-paper);transition:transform .18s,background .18s,box-shadow .18s;
+}
+.by-btn:hover{transform:translateY(-2px);background:var(--by-teal-deep);box-shadow:var(--by-shadow)}
+.by-btn-ghost{background:transparent;color:var(--by-ink);border:1.5px solid rgba(15,23,42,.22)}
+.by-btn-ghost:hover{background:var(--by-ink);color:var(--by-paper);border-color:var(--by-ink)}
+.by-btn-teal{background:var(--by-teal)}
+.by-btn-teal:hover{background:var(--by-teal-deep)}
+
+/* ============ 首屏：左文右侧大图 + 数据条 ============ */
+.by-hero{padding:56px 0 20px;background:
+  radial-gradient(1200px 500px at 88% -10%,rgba(14,165,160,.16),transparent 60%),
+  radial-gradient(800px 400px at 0% 10%,rgba(232,163,61,.14),transparent 55%);
+}
+.by-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:52px;align-items:center}
+.by-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;background:var(--by-white);
+  border:1px solid var(--by-line);border-radius:99px;padding:5px 14px;font-size:12.5px;
+  font-weight:700;color:var(--by-ink-soft);margin-bottom:18px;box-shadow:var(--by-shadow);
+}
+.by-hero-badge i{width:7px;height:7px;border-radius:50%;background:var(--by-teal);display:block}
+.by-hero h1{
+  font-size:clamp(38px,5.4vw,64px);letter-spacing:2px;line-height:1.1;margin-bottom:16px;
+}
+.by-hero h1 span{color:var(--by-teal-deep)}
+.by-hero-slogan{
+  font-size:clamp(17px,2vw,21px);font-weight:800;color:var(--by-ink-soft);margin-bottom:16px;
+}
+.by-hero-intro{color:#4a5266;font-size:15.5px;max-width:540px}
+.by-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.by-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:34px;
+  padding-top:26px;border-top:1px dashed var(--by-line);
+}
+.by-stat-num{font-size:clamp(22px,2.6vw,30px);font-weight:900;letter-spacing:1px;color:var(--by-ink)}
+.by-stat-num small{font-size:13px;font-weight:800;color:var(--by-teal-deep);margin-left:3px}
+.by-stat-label{font-size:12.5px;color:var(--by-muted);font-weight:600}
+
+.by-hero-visual{position:relative}
+.by-hero-figure{
+  border-radius:24px;overflow:hidden;box-shadow:var(--by-shadow-lg);
+  border:1px solid rgba(15,23,42,.08);background:var(--by-white);
+}
+.by-hero-figure svg{width:100%;height:auto;aspect-ratio:16/13}
+.by-hero-float{
+  position:absolute;left:-18px;bottom:22px;background:var(--by-white);
+  border-radius:14px;padding:12px 16px;box-shadow:var(--by-shadow-lg);
+  border:1px solid var(--by-line);display:flex;align-items:center;gap:11px;max-width:280px;
+}
+.by-hero-float-dot{width:34px;height:34px;border-radius:10px;background:rgba(14,165,160,.16);display:grid;place-items:center;font-weight:900;color:var(--by-teal-deep)}
+.by-hero-float b{display:block;font-size:13px}
+.by-hero-float span{font-size:11.5px;color:var(--by-muted)}
+
+/* ============ 品牌解析 ============ */
+.by-about{background:var(--by-paper-2);border-top:1px solid var(--by-line);border-bottom:1px solid var(--by-line)}
+.by-about-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.55fr);gap:48px}
+.by-about-side{position:sticky;top:150px;align-self:start}
+.by-about-figure{border-radius:18px;overflow:hidden;box-shadow:var(--by-shadow);border:1px solid var(--by-line)}
+.by-about-figure svg{width:100%;height:auto;aspect-ratio:4/5}
+.by-about-mini{
+  margin-top:16px;background:var(--by-white);border:1px solid var(--by-line);border-radius:14px;
+  padding:16px 18px;font-size:13.5px;color:var(--by-muted);
+}
+.by-about-mini b{display:block;color:var(--by-ink);font-size:14.5px;margin-bottom:4px}
+.by-about-body h3{font-size:19px;margin:26px 0 8px}
+.by-about-body h3:first-of-type{margin-top:8px}
+.by-about-body p{color:#454d61;font-size:15px}
+.by-about-highlight{
+  background:linear-gradient(90deg,rgba(14,165,160,.12),rgba(232,163,61,.1));
+  border-left:4px solid var(--by-teal);padding:14px 18px;border-radius:0 12px 12px 0;
+  font-size:14.5px;color:var(--by-ink-soft);margin:20px 0;
+}
+.by-about-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:22px}
+.by-fact{background:var(--by-white);border:1px solid var(--by-line);border-radius:12px;padding:12px 15px;font-size:13px;color:var(--by-muted)}
+.by-fact b{display:block;font-size:15px;color:var(--by-ink);margin-bottom:2px}
+
+/* ============ 焦点视频 ============ */
+.by-videos{background:var(--by-paper)}
+.by-video-focus{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:40px;align-items:start}
+.by-focus-card{
+  background:var(--by-white);border:1px solid var(--by-line);border-radius:20px;overflow:hidden;
+  box-shadow:var(--by-shadow);transition:transform .25s,box-shadow .25s;
+}
+.by-focus-card:hover{transform:translateY(-4px);box-shadow:var(--by-shadow-lg)}
+.by-focus-thumb{position:relative;background:#111827}
+.by-focus-thumb svg{width:100%;height:auto;aspect-ratio:16/9}
+.by-play{
+  position:absolute;inset:0;display:grid;place-items:center;
+}
+.by-play i{
+  width:62px;height:62px;border-radius:50%;background:rgba(251,249,244,.92);
+  display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:transform .2s;
+}
+.by-play i::before{content:"";border-left:18px solid var(--by-ink);border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:5px}
+.by-focus-card:hover .by-play i{transform:scale(1.08)}
+.by-focus-body{padding:20px 22px 22px}
+.by-focus-body h3{font-size:20px;margin-bottom:8px}
+.by-focus-body p{font-size:14px;color:var(--by-muted)}
+.by-meta{display:flex;align-items:center;gap:14px;font-size:12.5px;color:var(--by-muted);flex-wrap:wrap}
+.by-meta b{color:var(--by-ink-soft)}
+.by-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.by-act{
+  border:1px solid var(--by-line);background:var(--by-paper-2);border-radius:99px;
+  padding:6px 13px;font-size:12.5px;font-weight:700;color:var(--by-ink-soft);
+  display:inline-flex;align-items:center;gap:6px;transition:all .18s;
+}
+.by-act:hover{border-color:var(--by-teal);color:var(--by-teal-deep)}
+.by-act.by-act-on{background:var(--by-teal);border-color:var(--by-teal);color:#04211f}
+.by-act-heart.by-act-on{background:#e8574a;border-color:#e8574a;color:#fff}
+.by-video-list{display:flex;flex-direction:column;gap:12px}
+.by-video-item{
+  display:grid;grid-template-columns:64px minmax(0,1fr);gap:14px;
+  background:var(--by-white);border:1px solid var(--by-line);border-radius:14px;padding:14px;
+  transition:border-color .2s,transform .2s,box-shadow .2s;
+}
+.by-video-item:hover{border-color:var(--by-teal);transform:translateX(3px);box-shadow:var(--by-shadow)}
+.by-video-item-thumb{border-radius:10px;overflow:hidden;background:#1f2937}
+.by-video-item-thumb svg{width:100%;height:auto;aspect-ratio:1/1}
+.by-video-item h4{font-size:15.5px;margin-bottom:4px}
+.by-video-item p{font-size:13px;color:var(--by-muted);margin-bottom:8px}
+
+/* ============ 数据榜单 ============ */
+.by-rank{background:var(--by-ink);color:var(--by-paper);}
+.by-rank .by-eyebrow{color:#7fe7e2}
+.by-rank .by-eyebrow::before{background:#7fe7e2}
+.by-rank .by-h2{color:var(--by-paper)}
+.by-rank .by-lead{color:#a9b0c2}
+.by-rank-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:34px}
+.by-rank-col{
+  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;padding:20px 20px 14px;
+}
+.by-rank-col h3{font-size:16.5px;margin-bottom:14px;display:flex;align-items:center;gap:9px;color:var(--by-paper)}
+.by-rank-col h3 span{font-size:11.5px;background:var(--by-teal);color:#04211f;border-radius:6px;padding:1px 8px;font-weight:800}
+.by-rank-item{display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:10px;align-items:center;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.1);font-size:13.5px}
+.by-rank-item:last-child{border-bottom:0}
+.by-rank-num{font-weight:900;color:#7fe7e2;font-size:13px}
+.by-rank-item b{font-weight:700;color:#e9e5db}
+.by-rank-item em{font-style:normal;font-size:11.5px;color:#8b93a8}
+.by-rank-score{color:var(--by-amber);font-weight:800;font-size:12.5px}
+
+/* ============ 专题 ============ */
+.by-special{background:var(--by-paper-2);border-top:1px solid var(--by-line);border-bottom:1px solid var(--by-line)}
+.by-special-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:32px}
+.by-special-card{
+  background:var(--by-white);border:1px solid var(--by-line);border-radius:18px;overflow:hidden;
+  box-shadow:var(--by-shadow);display:flex;flex-direction:column;
+}
+.by-special-card.by-special-wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)}
+.by-special-cover{background:#0f172a}
+.by-special-cover svg{width:100%;height:auto;aspect-ratio:16/10}
+.by-special-wide .by-special-cover svg{aspect-ratio:16/12;height:100%}
+.by-special-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px}
+.by-special-body h3{font-size:19px}
+.by-special-body p{font-size:13.5px;color:var(--by-muted);margin-bottom:2px}
+.by-special-status{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--by-teal-deep)}
+.by-special-status i{width:7px;height:7px;border-radius:50%;background:var(--by-teal);display:block}
+.by-special-list{margin-top:6px;font-size:13px;color:var(--by-ink-soft)}
+.by-special-list li{padding:6px 0;border-top:1px dashed var(--by-line);display:flex;gap:8px}
+.by-special-list li::before{content:"▸";color:var(--by-teal);flex-shrink:0}
+
+/* ============ 创作者 ============ */
+.by-authors{background:var(--by-paper)}
+.by-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:32px}
+.by-author-card{
+  background:var(--by-white);border:1px solid var(--by-line);border-radius:18px;
+  padding:22px;display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px;
+  transition:transform .22s,box-shadow .22s;box-shadow:var(--by-shadow);
+}
+.by-author-card:hover{transform:translateY(-4px);box-shadow:var(--by-shadow-lg)}
+.by-avatar{
+  width:72px;height:72px;border-radius:50%;display:grid;place-items:center;
+  font-size:24px;font-weight:900;color:#04211f;letter-spacing:1px;flex-shrink:0;
+}
+.by-av-1{background:linear-gradient(135deg,#9fe8e3,#0ea5a0)}
+.by-av-2{background:linear-gradient(135deg,#f8d49b,#e8a33d)}
+.by-av-3{background:linear-gradient(135deg,#c3cde0,#5b6b8c);color:#fff}
+.by-av-4{background:linear-gradient(135deg,#f2b8b0,#d9685b);color:#fff}
+.by-av-5{background:linear-gradient(135deg,#b8e0c4,#3f8f61);color:#fff}
+.by-av-6{background:linear-gradient(135deg,#d9c7f0,#8659c9);color:#fff}
+.by-author-card h3{font-size:17px;margin-bottom:2px}
+.by-author-field{font-size:12.5px;font-weight:700;color:var(--by-teal-deep);margin-bottom:6px}
+.by-author-nums{display:flex;gap:14px;font-size:12px;color:var(--by-muted);margin-bottom:6px;flex-wrap:wrap}
+.by-author-nums b{color:var(--by-ink)}
+.by-author-bio{font-size:13px;color:#4a5266;line-height:1.65}
+.by-author-more{margin-top:10px}
+
+/* ============ 图文索引 ============ */
+.by-index{background:var(--by-paper-2);border-top:1px solid var(--by-line);border-bottom:1px solid var(--by-line)}
+.by-index-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:32px}
+.by-index-card{background:var(--by-white);border:1px solid var(--by-line);border-radius:16px;overflow:hidden;box-shadow:var(--by-shadow)}
+.by-index-card svg{width:100%;height:auto;aspect-ratio:16/10}
+.by-index-body{padding:16px 18px 20px}
+.by-index-body h3{font-size:16px;margin-bottom:6px}
+.by-index-body p{font-size:13px;color:var(--by-muted)}
+.by-index-link{font-size:12.5px;font-weight:800;color:var(--by-teal-deep)}
+.by-index-link:hover{text-decoration:underline}
+
+/* ============ 评价 ============ */
+.by-reviews{background:var(--by-paper)}
+.by-review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:32px}
+.by-review{
+  background:var(--by-white);border:1px solid var(--by-line);border-radius:16px;padding:18px 20px;
+  display:flex;flex-direction:column;gap:8px;
+}
+.by-review-top{display:flex;align-items:center;gap:10px}
+.by-review-avatar{
+  width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
+  font-weight:900;font-size:14px;flex-shrink:0;
+}
+.by-review-name{font-size:13.5px;font-weight:800}
+.by-review-date{font-size:11.5px;color:var(--by-muted)}
+.by-stars{color:var(--by-amber);font-size:13px;letter-spacing:1px;margin-left:auto}
+.by-review p{font-size:13.5px;color:#454d61;margin:0}
+.by-review-tag{font-size:11.5px;color:var(--by-teal-deep);font-weight:700}
+
+/* ============ 灵感 / FAQ / 动态 ============ */
+.by-aside-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:44px;align-items:start}
+.by-faq details{
+  background:var(--by-white);border:1px solid var(--by-line);border-radius:12px;
+  padding:14px 18px;margin-bottom:10px;transition:border-color .2s;
+}
+.by-faq details[open]{border-color:var(--by-teal);box-shadow:var(--by-shadow)}
+.by-faq summary{
+  cursor:pointer;font-weight:800;font-size:14.5px;list-style:none;
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+.by-faq summary::-webkit-details-marker{display:none}
+.by-faq summary::after{content:"+";font-size:19px;color:var(--by-teal-deep);font-weight:700;transition:transform .2s}
+.by-faq details[open] summary::after{transform:rotate(45deg)}
+.by-faq details p{font-size:13.5px;color:var(--by-muted);margin:10px 0 0}
+.by-news-item{
+  display:grid;grid-template-columns:66px minmax(0,1fr);gap:14px;padding:14px 0;
+  border-bottom:1px dashed var(--by-line);
+}
+.by-news-item:last-child{border-bottom:0}
+.by-news-date{
+  background:var(--by-white);border:1px solid var(--by-line);border-radius:10px;
+  text-align:center;padding:8px 4px;font-size:11px;color:var(--by-muted);font-weight:700;height:fit-content;
+}
+.by-news-date b{display:block;font-size:17px;color:var(--by-ink)}
+.by-news-item h4{font-size:14.5px;margin-bottom:3px}
+.by-news-item p{font-size:12.5px;color:var(--by-muted);margin:0}
+
+.by-inspire{background:linear-gradient(135deg,#0f172a,#1c2a44);color:var(--by-paper);border-radius:20px;padding:28px 28px 24px;margin-bottom:24px}
+.by-inspire h3{font-size:19px;margin-bottom:6px;color:var(--by-paper)}
+.by-inspire p{font-size:13.5px;color:#a9b0c2}
+.by-inspire-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.by-inspire-tags button{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#d7dce8;
+  border-radius:99px;padding:6px 13px;font-size:12.5px;font-weight:700;transition:all .18s;
+}
+.by-inspire-tags button:hover{background:var(--by-teal);border-color:var(--by-teal);color:#04211f}
+.by-inspire-out{
+  margin-top:14px;background:rgba(14,165,160,.14);border:1px dashed rgba(14,165,160,.5);
+  border-radius:12px;padding:12px 15px;font-size:13px;color:#d7dce8;min-height:46px;
+}
+.by-partners{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.by-partners span{
+  background:var(--by-white);border:1px solid var(--by-line);border-radius:10px;
+  padding:7px 14px;font-size:12.5px;font-weight:700;color:var(--by-ink-soft);
+}
+
+/* ============ 评论区 ============ */
+.by-comments{background:var(--by-paper-2);border-top:1px solid var(--by-line)}
+.by-comment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:30px}
+.by-comment{
+  background:var(--by-white);border:1px solid var(--by-line);border-radius:14px;padding:16px 18px;
+}
+.by-comment-top{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.by-comment-name{font-size:13px;font-weight:800}
+.by-comment-time{font-size:11px;color:var(--by-muted);margin-left:auto}
+.by-comment p{font-size:13.5px;color:#454d61;margin:0}
+.by-comment-foot{display:flex;gap:12px;margin-top:10px;font-size:12px;color:var(--by-muted)}
+.by-comment-foot button{border:0;background:transparent;font-size:12px;color:var(--by-muted);padding:0;font-weight:700}
+.by-comment-foot button:hover{color:var(--by-teal-deep)}
+
+/* ============ 提交/联系 CTA ============ */
+.by-cta{background:var(--by-teal);color:#04211f;padding:52px 0}
+.by-cta-inner{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.by-cta h2{font-size:clamp(22px,2.8vw,30px);margin-bottom:8px;color:#03201e}
+.by-cta p{font-size:14.5px;margin:0;color:#06322f;font-weight:600;max-width:580px}
+.by-cta-actions{display:flex;gap:12px;flex-wrap:wrap}
+.by-cta .by-btn{background:#04211f;color:var(--by-paper)}
+.by-cta .by-btn:hover{background:#02110f}
+.by-cta .by-btn-ghost{background:transparent;border-color:rgba(4,33,31,.4);color:#04211f}
+.by-cta .by-btn-ghost:hover{background:#04211f;color:var(--by-paper)}
+
+/* ============ 页脚 ============ */
+.by-footer{background:var(--by-ink);color:#a9b0c2;padding:56px 0 26px}
+.by-footer-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:34px}
+.by-footer .by-logo-name{color:var(--by-paper)}
+.by-footer .by-logo-sub{color:#7d869c}
+.by-footer p{font-size:13px;line-height:1.7}
+.by-footer h4{font-size:13.5px;color:var(--by-paper);margin-bottom:12px;letter-spacing:1px}
+.by-footer-links li{padding:4px 0;font-size:13px}
+.by-footer-links a:hover{color:var(--by-teal)}
+.by-footer-bottom{
+  margin-top:38px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:#7d869c;
+}
+.by-footer-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.by-footer-badges span{font-size:11.5px;border:1px solid rgba(255,255,255,.18);border-radius:6px;padding:2px 9px}
+
+/* ============ 弹窗 / Toast / 回到顶部 ============ */
+.by-modal-mask{
+  position:fixed;inset:0;background:rgba(15,23,42,.55);backdrop-filter:blur(3px);
+  display:none;align-items:center;justify-content:center;z-index:120;padding:20px;
+}
+.by-modal-mask.by-open{display:flex}
+.by-modal{
+  background:var(--by-paper-2);border-radius:20px;max-width:520px;width:100%;
+  padding:26px 26px 24px;box-shadow:var(--by-shadow-lg);position:relative;
+  max-height:86vh;overflow:auto;
+}
+.by-modal h3{font-size:19px;margin-bottom:10px}
+.by-modal p,.by-modal li{font-size:13.5px;color:#454d61}
+.by-modal-close{
+  position:absolute;top:12px;right:12px;width:32px;height:32px;border-radius:50%;
+  border:1px solid var(--by-line);background:var(--by-white);font-size:17px;line-height:1;color:var(--by-ink);
+}
+.by-modal-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.by-modal-profile{display:flex;gap:14px;align-items:center;margin-bottom:12px}
+.by-share-list{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.by-share-list button{
+  border:1px solid var(--by-line);background:var(--by-white);border-radius:10px;
+  padding:9px 16px;font-size:13px;font-weight:700;
+}
+.by-share-list button:hover{border-color:var(--by-teal);color:var(--by-teal-deep)}
+
+.by-toast{
+  position:fixed;left:50%;bottom:32px;transform:translate(-50%,20px);
+  background:var(--by-ink);color:var(--by-paper);border-radius:99px;
+  padding:11px 22px;font-size:13.5px;font-weight:700;opacity:0;pointer-events:none;
+  transition:opacity .25s,transform .25s;z-index:200;box-shadow:var(--by-shadow-lg);
+}
+.by-toast.by-toast-show{opacity:1;transform:translate(-50%,0)}
+
+.by-top-btn{
+  position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;
+  border:1px solid var(--by-line);background:var(--by-white);color:var(--by-ink);
+  font-size:18px;font-weight:900;display:grid;place-items:center;z-index:90;
+  box-shadow:var(--by-shadow);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;
+  transform:translateY(10px);
+}
+.by-top-btn.by-top-show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.by-top-btn:hover{background:var(--by-teal);border-color:var(--by-teal);color:#04211f}
+
+/* ============ 响应式 ============ */
+@media (max-width:1024px){
+  .by-hero-grid,.by-about-grid,.by-video-focus,.by-aside-grid{grid-template-columns:minmax(0,1fr);gap:34px}
+  .by-about-side{position:static}
+  .by-rank-grid{grid-template-columns:minmax(0,1fr)}
+  .by-index-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .by-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .by-special-wide{grid-template-columns:minmax(0,1fr)}
+  .by-special-wide .by-special-cover svg{aspect-ratio:16/9;height:auto}
+  .by-nav{display:none}
+  .by-nav.by-nav-open{
+    display:flex;flex-direction:column;align-items:stretch;gap:2px;
+    position:absolute;left:0;right:0;top:100%;background:var(--by-paper-2);
+    border-bottom:1px solid var(--by-line);padding:12px 4vw 18px;box-shadow:var(--by-shadow-lg);
+    margin-left:0;z-index:70;
+  }
+  .by-nav.by-nav-open a{padding:11px 14px}
+  .by-nav-toggle{display:inline-flex}
+  .by-header-inner{position:relative;flex-wrap:wrap}
+}
+@media (max-width:760px){
+  .by-header-inner{gap:10px}
+  .by-search{order:3;width:100%;margin-top:4px}
+  .by-search input{width:100%;flex:1}
+  .by-header-tools{margin-left:auto}
+  .by-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .by-stat-num{font-size:20px}
+  .by-author-grid,.by-review-grid,.by-comment-grid,.by-special-grid,.by-index-grid,.by-about-facts{grid-template-columns:minmax(0,1fr)}
+  .by-author-card{grid-template-columns:60px minmax(0,1fr)}
+  .by-avatar{width:60px;height:60px;font-size:20px}
+  .by-hero-float{position:static;margin-top:14px;max-width:none}
+  .by-section{padding:46px 0}
+  .by-footer-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+  .by-inspire{padding:22px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ===== 吸顶区：公告条 + 页头 ===== -->
+<div class="by-sticky-top" id="byTop">
+  <div class="by-announce">
+    <div class="by-wrap by-announce-inner">
+      <span class="by-announce-tag">官方发布</span>
+      <div class="by-announce-text">
+        <b>「一格一物」整理挑战赛</b> 第 3 季开启报名，本次新增 <b>6 个收纳赛道</b> 与「桌面复原」特别企划；首期嘉宾演示视频已上传，共 12 条精品内容。
+      </div>
+      <a class="by-announce-link" href="#byChallenge">查看赛程与报名 →</a>
+    </div>
+  </div>
+
+  <header class="by-header">
+    <div class="by-wrap by-header-inner">
+      <a class="by-logo" href="#byHome" aria-label="笔盒官网入口首页">
+        <span class="by-logo-mark" aria-hidden="true"></span>
+        <span class="by-logo-text">
+          <span class="by-logo-name">笔盒</span>
+          <span class="by-logo-sub">DAYBOX OFFICIAL</span>
+        </span>
+      </a>
+
+      <nav class="by-nav" id="byNav" aria-label="主导航">
+        <a href="#byHome" class="by-nav-active">首页</a>
+        <a href="#byAbout">品牌故事</a>
+        <a href="#byVideos">精品内容</a>
+        <a href="#byRank">数据榜单</a>
+        <a href="#bySpecial">专题企划</a>
+        <a href="#byAuthors">创作者</a>
+        <a href="#byReviews">用户口碑</a>
+        <a href="#byHelp">帮助中心</a>
+      </nav>
+
+      <div class="by-header-tools">
+        <div class="by-search">
+          <input type="search" id="bySearchInput" placeholder="搜索笔盒、收纳、文具…" aria-label="站内搜索">
+          <button type="button" id="bySearchBtn">搜索</button>
+        </div>
+        <button type="button" class="by-nav-toggle" id="byNavToggle" aria-label="展开导航菜单" aria-expanded="false">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+  <!-- ===== S2 品牌首屏 ===== -->
+  <section class="by-hero" id="byHome">
+    <div class="by-wrap by-hero-grid">
+      <div class="by-hero-copy">
+        <span class="by-hero-badge"><i></i>笔盒品牌官网 · 官方网站</span>
+        <h1>笔盒</h1>
+        <p class="by-hero-slogan">每一格都有归属，让桌面成为你想坐下来的地方</p>
+        <p class="by-hero-intro">
+          笔盒是专注桌面收纳与文具整理的原创品牌，以「一格一物」为设计方法，为创意工作者、学生与自由职业者提供可长期使用的收纳工具与整理内容。作为国内桌面整理垂直领域的行业领先企业，我们持续运营一个有温度的视频社区，把专业、高清、正版的创作经验分享给每一位用户。
+        </p>
+        <div class="by-hero-actions">
+          <a class="by-btn" href="#byVideos">观看品牌影像</a>
+          <a class="by-btn by-btn-ghost" href="#byAbout">了解笔盒</a>
+          <a class="by-btn by-btn-ghost" href="#byChallenge">参与挑战赛</a>
+        </div>
+        <div class="by-stats">
+          <div>
+            <div class="by-stat-num">38<small>万+</small></div>
+            <div class="by-stat-label">社区注册创作者</div>
+          </div>
+          <div>
+            <div class="by-stat-num">1,260<small>条</small></div>
+            <div class="by-stat-label">官方高清影像内容</div>
+          </div>
+          <div>
+            <div class="by-stat-num">96.4<small>%</small></div>
+            <div class="by-stat-label">用户口碑好评率</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="by-hero-visual">
+        <figure class="by-hero-figure">
+          <svg viewBox="0 0 640 520" role="img" aria-label="笔盒品牌首屏主视觉：一张分类整齐的桌面与打开的分格笔盒">
+            <defs>
+              <linearGradient id="byHeroSky" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#e9f4f2"/>
+                <stop offset="1" stop-color="#f6efe1"/>
+              </linearGradient>
+              <linearGradient id="byHeroBox" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#16233d"/>
+                <stop offset="1" stop-color="#0d1526"/>
+              </linearGradient>
+            </defs>
+            <rect width="640" height="520" fill="url(#byHeroSky)"/>
+            <circle cx="520" cy="96" r="58" fill="#e8a33d" opacity=".35"/>
+            <circle cx="112" cy="80" r="26" fill="#0ea5a0" opacity=".28"/>
+            <rect x="60" y="330" width="520" height="26" rx="13" fill="#cfc4ae"/>
+            <rect x="86" y="356" width="468" height="14" rx="7" fill="#bdb19a"/>
+            <rect x="120" y="192" width="400" height="140" rx="18" fill="url(#byHeroBox)"/>
+            <rect x="140" y="212" width="102" height="100" rx="10" fill="#f4efe6" opacity=".92"/>
+            <rect x="252" y="212" width="102" height="100" rx="10" fill="#f4efe6" opacity=".72"/>
+            <rect x="364" y="212" width="136" height="100" rx="10" fill="#f4efe6" opacity=".86"/>
+            <rect x="158" y="228" width="8" height="66" rx="4" fill="#0ea5a0"/>
+            <rect x="176" y="228" width="8" height="66" rx="4" fill="#e8a33d"/>
+            <rect x="194" y="246" width="30" height="30" rx="7" fill="#16233d" opacity=".82"/>
+            <rect x="270" y="228" width="66" height="9" rx="4" fill="#16233d" opacity=".6"/>
+            <rect x="270" y="246" width="52" height="9" rx="4" fill="#16233d" opacity=".38"/>
+            <rect x="270" y="264" width="60" height="9" rx="4" fill="#16233d" opacity=".3"/>
+            <circle cx="398" cy="250" r="20" fill="#0ea5a0" opacity=".85"/>
+            <circle cx="446" cy="250" r="20" fill="#e8a33d" opacity=".8"/>
+            <rect x="382" y="282" width="100" height="8" rx="4" fill="#16233d" opacity=".35"/>
+            <rect x="120" y="332" width="400" height="10" rx="5" fill="#0b1220" opacity=".35"/>
+            <rect x="176" y="132" width="60" height="14" rx="7" fill="#0ea5a0" opacity=".7"/>
+            <rect x="252" y="120" width="96" height="14" rx="7" fill="#e8a33d" opacity=".75"/>
+            <rect x="364" y="138" width="48" height="14" rx="7" fill="#16233d" opacity=".4"/>
+            <rect x="86" y="404" width="160" height="60" rx="12" fill="#fff" opacity=".75"/>
+            <rect x="106" y="420" width="86" height="9" rx="4" fill="#16233d" opacity=".4"/>
+            <rect x="106" y="438" width="52" height="9" rx="4" fill="#16233d" opacity=".24"/>
+            <rect x="284" y="404" width="252" height="60" rx="12" fill="#fff" opacity=".75"/>
+            <circle cx="316" cy="434" r="16" fill="#0ea5a0" opacity=".6"/>
+            <rect x="344" y="424" width="120" height="9" rx="4" fill="#16233d" opacity=".4"/>
+            <rect x="344" y="442" width="80" height="9" rx="4" fill="#16233d" opacity=".24"/>
+          </svg>
+        </figure>
+        <div class="by-hero-float">
+          <span class="by-hero-float-dot">◎</span>
+          <span>
+            <b>本周精品内容已上新</b>
+            <span>《桌面复原计划 · 第 08 集》时长 14:32</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 品牌故事与关键词深度解析 ===== -->
+  <section class="by-section by-about" id="byAbout">
+    <div class="by-wrap">
+      <span class="by-eyebrow">品牌故事 · 深度解析</span>
+      <h2 class="by-h2">一家做笔盒的企业，为什么坚持拍视频</h2>
+      <p class="by-lead">笔盒官网入口不只是产品的入口，也是内容的入口。我们把设计、工艺、使用场景与真实生活拍成影像，让整理这件事被看见、被理解、被持续实践。</p>
+
+      <div class="by-about-grid" style="margin-top:36px">
+        <aside class="by-about-side">
+          <figure class="by-about-figure">
+            <svg viewBox="0 0 400 500" role="img" aria-label="笔盒设计工作室一角：木质工作台上摆放分格样机与手绘草图">
+              <rect width="400" height="500" fill="#f1ebdf"/>
+              <rect x="0" y="330" width="400" height="170" fill="#d9cdb6"/>
+              <rect x="36" y="120" width="154" height="196" rx="8" fill="#0f172a"/>
+              <rect x="52" y="136" width="122" height="164" rx="4" fill="#f4efe6"/>
+              <path d="M66 172h94M66 196h72M66 220h84M66 244h56" stroke="#0f172a" stroke-width="5" stroke-linecap="round" opacity=".45"/>
+              <rect x="216" y="158" width="146" height="158" rx="10" fill="#0ea5a0" opacity=".85"/>
+              <rect x="234" y="178" width="110" height="52" rx="6" fill="#f4efe6"/>
+              <rect x="270" y="178" width="6" height="52" fill="#0f172a" opacity=".35"/>
+              <rect x="234" y="244" width="52" height="54" rx="6" fill="#f4efe6" opacity=".8"/>
+              <rect x="292" y="244" width="52" height="54" rx="6" fill="#f4efe6" opacity=".55"/>
+              <rect x="58" y="356" width="120" height="14" rx="7" fill="#0f172a" opacity=".75"/>
+              <rect x="58" y="384" width="196" height="12" rx="6" fill="#0f172a" opacity=".28"/>
+              <rect x="58" y="408" width="150" height="12" rx="6" fill="#0f172a" opacity=".2"/>
+              <circle cx="300" cy="390" r="34" fill="#e8a33d" opacity=".7"/>
+              <path d="M282 390l12 12 24-26" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round"/>
+              <rect x="36" y="66" width="188" height="16" rx="8" fill="#0f172a" opacity=".16"/>
+            </svg>
+          </figure>
+          <div class="by-about-mini">
+            <b>企业简介</b>
+            笔盒（Daybox）成立于 2016 年，是深耕桌面收纳与文具整理垂直领域的原创企业，具备设计、研发、生产与内容运营能力，拥有 38 万注册创作者的视频社区。我们以「一格一物」为方法论，为全球用户提供值得信赖的收纳产品与精品内容。
+          </div>
+        </aside>
+
+        <div class="by-about-body">
+          <h3>从一支笔的归处开始：笔盒的十年</h3>
+          <p>
+            2016 年，笔盒的第一只分格笔盒在杭州一间只有两张工作台的出租屋里完成打样。当时的想法很朴素：桌面上的东西为什么会乱？因为每一件物品都没有被明确地告知「应该在哪里」。于是我们把笔盒从「一个容器」重新定义为「一组格子」——每格对应一类物品，每类物品只允许一格。这个看似简单的约束，后来成为笔盒整个产品体系与内容体系的原点。
+          </p>
+          <p>
+            十年之后，笔盒官网入口已经不再只是一个卖笔盒的地方。我们拥有独立的设计工作室、自有生产线与 12 人内容团队，运营 1,260 条高清原创影像，覆盖桌面复原、文具测评、手作过程与创作者访谈。作为一家行业领先的垂直品牌，我们的用户中既有每天要处理三场会议的职场人，也有在宿舍里搭建学习角的学生，还有把整面墙改造成工具墙的木作爱好者。他们的共同点，是愿意花一点时间，为自己建立一个可以长期维持的秩序。
+          </p>
+
+          <h3>笔盒官网入口是什么：一个可被使用的品牌内容生态</h3>
+          <p>
+            很多用户第一次搜索「笔盒官网入口」时，其实是在寻找两样东西：一是能放心下单的正版产品通道，二是能真正学到方法的整理内容。因此，我们把官方网站设计成「产品 + 内容 + 社区」三层结构。产品层提供整盒套装、模块化隔板与单格补件，支持长期扩充而不是整盒替换；内容层由官方团队持续发布教程、测评与记录，全部高清正版，注明拍摄时间与场地；社区层则是创作者上传、比赛报名、投票与交流的场所。三层之间并不孤立，一条视频里出现的隔板尺寸，往往可以直接在页面下方找到对应条目。
+          </p>
+          <p>
+            在内容方向上，我们长期坚持三条主线。第一条是「经验分享」，例如如何用四步完成一次桌面复原、如何在 60 分钟内完成一次搬家打包；第二条是「深度测评」，由内容团队自费购买同价位产品做横向对照，所有测试条件、失败案例都会如实呈现；第三条是「人物与故事」，我们拍摄过把旧抽屉改成收纳盒的手工爱好者，也拍摄过把小书桌整理成作品集现场的插画师。这些内容不追求短期流量，追求的是可以被反复观看、反复使用。
+          </p>
+
+          <h3>专业、高清与正版：内容品质的三条底线</h3>
+          <p>
+            桌面整理看起来是小事，但拍摄它并不容易：金属反光、纸张边缘、分格阴影，都会影响观看者对产品的判断。为此，笔盒内容团队建立了固定的拍摄规范——自然光与柔光箱双灯位、统一 1/2.8 光圈、封面必须展示实际使用状态而非摆拍。我们坚持使用正版音源与自制字幕，出镜创作者的肖像与内容授权均签署书面文件。这些流程并不会让内容更「火」，但会让用户更加信任。
+          </p>
+          <p>
+            我们同时相信，一个品牌的品质感来自可复现的细节。笔盒的每一只笔盒在出厂前都要经过合页开合 3,000 次测试、内衬刮擦测试与 48 小时承压测试；每一位报名参加整理挑战赛的用户，都会收到一份由内容团队编写的《拍摄引导手册》，里面写清了机位、角度与光线建议。我们并不要求每个人都拍得专业，但希望每一条上传的内容都被认真对待。
+          </p>
+
+          <div class="by-about-highlight">
+            我们把这套方法称为「一格一物」：不是让桌面空无一物，而是让每件物品都有一个被明确安排的位置。笔盒官网入口，就是这套方法最完整的说明书。
+          </div>
+
+          <h3>一个持续运营的社区，比一次营销更重要</h3>
+          <p>
+            从 2023 年起，笔盒把每年 4 月与 10 月固定为「整理季」，社区会同步开启比赛报名、主题投稿与投票。第一季我们收到 2,840 份投稿，其中 61% 来自非专业创作者；第三季新增 6 个收纳赛道，包括小户型、宿舍、儿童房、手作台、移动办公与数码配件。为了让比赛更公平，我们公开了评分维度：可复现性 40%、整理逻辑 30%、影像表达 20%、社区互动 10%。每一季结束后，我们会把获奖方案整理成可下载的图文攻略，永久保留在官方网站。
+          </p>
+          <p>
+            在我们看来，社会责任不必宏大。让一个高中生学会管理自己的一平方米桌面，让一个刚毕业的年轻人不必为找不到保修卡而焦虑，让一位新手妈妈拥有一个可以随时收纳奶瓶配件的格子——这些都是真实、具体、可被陪伴的成长。笔盒会继续做这件事，慢一点也没有关系。
+          </p>
+
+          <div class="by-about-facts">
+            <div class="by-fact"><b>2016 年</b>品牌在杭州成立，首只分格笔盒打样完成</div>
+            <div class="by-fact"><b>2023 年</b>启动「整理季」，首届整理挑战赛开放报名</div>
+            <div class="by-fact"><b>1,260 条</b>官方高清原创影像，全部标注拍摄与授权信息</div>
+            <div class="by-fact"><b>96.4%</b>用户口碑好评率，来自持续运营的真实评价</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 精品内容：一幅重点大图 + 文字列表 ===== -->
+  <section class="by-section by-videos" id="byVideos">
+    <div class="by-wrap">
+      <span class="by-eyebrow">精品内容 · 官方发布</span>
+      <h2 class="by-h2">笔盒影像库：<em>看得懂、学得会、用得上</em></h2>
+      <p class="by-lead">每周三与周六更新。以下为本期焦点内容与最新条目，全部为笔盒官方团队与签约创作者原创，支持高清播放与收藏。</p>
+
+      <div class="by-video-focus" style="margin-top:34px">
+        <article class="by-focus-card">
+          <div class="by-focus-thumb">
+            <svg viewBox="0 0 640 360" role="img" aria-label="焦点视频封面：一位创作者在清晨的窗边复原一张堆满物品的书桌">
+              <defs>
+                <linearGradient id="byVid1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#12233d"/>
+                  <stop offset="1" stop-color="#0a6f6b"/>
+                </linearGradient>
+              </defs>
+              <rect width="640" height="360" fill="url(#byVid1)"/>
+              <rect x="48" y="60" width="200" height="150" rx="8" fill="#eaf2ef" opacity=".9"/>
+              <path d="M48 60l200 150M248 60L48 210" stroke="#12233d" stroke-width="4" opacity=".25"/>
+              <rect x="292" y="82" width="300" height="18" rx="9" fill="#f4efe6" opacity=".62"/>
+              <rect x="292" y="116" width="240" height="12" rx="6" fill="#f4efe6" opacity=".4"/>
+              <rect x="292" y="142" width="264" height="12" rx="6" fill="#f4efe6" opacity=".3"/>
+              <rect x="48" y="248" width="544" height="16" rx="8" fill="#e8a33d" opacity=".68"/>
+              <rect x="80" y="276" width="120" height="44" rx="8" fill="#f4efe6" opacity=".85"/>
+              <rect x="216" y="276" width="120" height="44" rx="8" fill="#f4efe6" opacity=".6"/>
+              <rect x="352" y="276" width="120" height="44" rx="8" fill="#f4efe6" opacity=".4"/>
+              <circle cx="560" cy="304" r="26" fill="#e8a33d"/>
+            </svg>
+            <span class="by-play" aria-hidden="true"><i></i></span>
+          </div>
+          <div class="by-focus-body">
+            <div class="by-meta" style="margin-bottom:8px">
+              <span class="by-tag">桌面复原</span>
+              <span class="by-tag by-tag-amber">本期焦点</span>
+              <span>时长 14:32</span>
+            </div>
+            <h3>桌面复原计划 · 第 08 集：从 217 件物品里留下 43 件</h3>
+            <p>跟随创作者「林一」走进一间 6 平方米的书房，用四步法完成一次彻底复原：清空、分类、留白、归位。视频完整展示分格笔盒的模块搭配逻辑，并给出可下载的清单表格。</p>
+            <div class="by-meta" style="margin-top:10px">
+              <span>作者 <b>林一</b></span>
+              <span>播放 <b data-by-num="128400">12.8万</b></span>
+              <span>收藏 <b data-by-num="9240">9,240</b></span>
+            </div>
+            <div class="by-actions">
+              <button type="button" class="by-act by-act-like" data-by-count="3112"><span>♡</span><span class="by-like-num">3,112</span></button>
+              <button type="button" class="by-act by-act-save">☆ 收藏</button>
+              <button type="button" class="by-act by-act-share">分享</button>
+              <button type="button" class="by-act by-act-download">下载清单</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="by-video-list" id="byVideoList">
+          <article class="by-video-item">
+            <div class="by-video-item-thumb">
+              <svg viewBox="0 0 120 120" role="img" aria-label="视频缩略图：三支不同颜色的笔并排插在笔盒里">
+                <rect width="120" height="120" fill="#f0e7d6"/>
+                <rect x="18" y="52" width="84" height="42" rx="8" fill="#0f172a"/>
+                <rect x="30" y="24" width="10" height="32" rx="5" fill="#0ea5a0"/>
+                <rect x="52" y="18" width="10" height="38" rx="5" fill="#e8a33d"/>
+                <rect x="74" y="28" width="10" height="28" rx="5" fill="#d9685b"/>
+              </svg>
+            </div>
+            <div>
+              <h4>文具测评 · 同价位六款分格笔盒的合页寿命对照</h4>
+              <p>内容团队自费购入六款产品，做 3,000 次开合计时测试，结果与预期并不一致。</p>
+              <div class="by-meta">
+                <span class="by-tag by-tag-ink">深度测评</span>
+                <span>作者 <b>笔盒实验室</b></span>
+                <span>播放 <b>8.6万</b></span>
+              </div>
+              <div class="by-actions">
+                <button type="button" class="by-act by-act-like" data-by-count="1840"><span>♡</span><span class="by-like-num">1,840</span></button>
+                <button type="button" class="by-act by-act-save">☆ 收藏</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="by-video-item">
+            <div class="by-video-item-thumb">
+              <svg viewBox="0 0 120 120" role="img" aria-label="视频缩略图：插画师桌面上的色卡与草图纸叠">
+                <rect width="120" height="120" fill="#e9f1f0"/>
+                <rect x="16" y="26" width="66" height="66" rx="6" fill="#fff" transform="rotate(-8 49 59)"/>
+                <rect x="34" y="38" width="66" height="66" rx="6" fill="#0ea5a0" opacity=".78" transform="rotate(7 67 71)"/>
+                <path d="M50 62h32M50 76h22" stroke="#f4efe6" stroke-width="5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h4>创作者专访 · 插画师阿禾：把小书桌整理成作品集现场</h4>
+              <p>一张 1.2 米的桌子如何同时容纳画稿、喷胶与拍摄灯位？阿禾给出了她的三条硬规则。</p>
+              <div class="by-meta">
+                <span class="by-tag by-tag-ink">人物访谈</span>
+                <span>作者 <b>阿禾</b></span>
+                <span>播放 <b>5.4万</b></span>
+              </div>
+              <div class="by-actions">
+                <button type="button" class="by-act by-act-like" data-by-count="967"><span>♡</span><span class="by-like-num">967</span></button>
+                <button type="button" class="by-act by-act-save">☆ 收藏</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="by-video-item">
+            <div class="by-video-item-thumb">
+              <svg viewBox="0 0 120 120" role="img" aria-label="视频缩略图：宿舍床位下方的小型移动收纳推车">
+                <rect width="120" height="120" fill="#0f172a"/>
+                <rect x="26" y="40" width="68" height="14" rx="6" fill="#e8a33d"/>
+                <rect x="26" y="62" width="68" height="14" rx="6" fill="#0ea5a0"/>
+                <rect x="26" y="84" width="68" height="14" rx="6" fill="#f4efe6" opacity=".8"/>
+                <circle cx="34" cy="106" r="6" fill="#f4efe6"/>
+                <circle cx="86" cy="106" r="6" fill="#f4efe6"/>
+              </svg>
+            </div>
+            <div>
+              <h4>教程干货 · 4 平方米宿舍的七处收纳补丁</h4>
+              <p>不拆墙、不打孔、毕业可复原。七处改造全部使用模块化隔板与磁吸配件完成。</p>
+              <div class="by-meta">
+                <span class="by-tag by-tag-ink">实用技巧</span>
+                <span>作者 <b>小满同学</b></span>
+                <span>播放 <b>11.2万</b></span>
+              </div>
+              <div class="by-actions">
+                <button type="button" class="by-act by-act-like" data-by-count="2410"><span>♡</span><span class="by-like-num">2,410</span></button>
+                <button type="button" class="by-act by-act-save">☆ 收藏</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="by-video-item">
+            <div class="by-video-item-thumb">
+              <svg viewBox="0 0 120 120" role="img" aria-label="视频缩略图：木作台面上刨花与手工榫卯小盒">
+                <rect width="120" height="120" fill="#f3e8d7"/>
+                <rect x="22" y="54" width="76" height="44" rx="6" fill="#8d5f34"/>
+                <rect x="34" y="44" width="52" height="12" rx="5" fill="#b98550"/>
+                <path d="M24 44c14-14 30 6 44-6s22 8 30 2" stroke="#8d5f34" stroke-width="4" fill="none" opacity=".6"/>
+                <circle cx="88" cy="30" r="12" fill="#e8a33d" opacity=".8"/>
+              </svg>
+            </div>
+            <div>
+              <h4>创作幕后 · 一块旧抽屉变成笔盒的 9 个小时</h4>
+              <p>从拆解、除锈到重新分格，木作爱好者老周记录了一次不完美但真实的手作过程。</p>
+              <div class="by-meta">
+                <span class="by-tag by-tag-ink">手作DIY</span>
+                <span>作者 <b>老周木作</b></span>
+                <span>播放 <b>3.9万</b></span>
+              </div>
+              <div class="by-actions">
+                <button type="button" class="by-act by-act-like" data-by-count="712"><span>♡</span><span class="by-like-num">712</span></button>
+                <button type="button" class="by-act by-act-save">☆ 收藏</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 数据榜单 ===== -->
+  <section class="by-section by-rank" id="byRank">
+    <div class="by-wrap">
+      <span class="by-eyebrow">数据榜单 · 持续运营</span>
+      <h2 class="by-h2">本周笔盒社区三个榜</h2>
+      <p class="by-lead">榜单综合播放、收藏、评论与复现成功率计算，每周一 10:00 更新。所有数据来自笔盒官方网站后台统计，公开透明。</p>
+
+      <div class="by-rank-grid">
+        <div class="by-rank-col">
+          <h3><span>热度</span>热门内容榜</h3>
+          <div class="by-rank-item"><span class="by-rank-num">01</span><span><b>桌面复原计划 · 第 08 集</b><br><em>林一 · 桌面复原</em></span><span class="by-rank-score">98.2</span></div>
+          <div class="by-rank-item"><span class="by-rank-num">02</span><span><b>宿舍七处收纳补丁</b><br><em>小满同学 · 教程干货</em></span><span class="by-rank-score">95.7</span></div>
+          <div class="by-rank-item"><span class="by-rank-num">03</span><span><b>六款分格笔盒合页寿命对照</b><br><em>笔盒实验室 · 深度测评</em></span><span class="by-rank-score">93.4</span></div>
+          <div class="by-rank-item"><span class="by-rank-num">04</span><span><b>插画师阿禾的小书桌</b><br><em>阿禾 · 人物访谈</em></span><span class="by-rank-score">90.1</span></div>
+          <div class="by-rank-item"><span class="by-rank-num">05</span><span><b>一块旧抽屉变成笔盒</b><br><em>老周木作 · 手作DIY</em></span><span class="by-rank-score">87.6</span></div>
+        </div>
+
+        <div class="by-rank-col">
+          <h3><span>新人</span>成长榜</h3>
+          <div class="by-rank-item"><span class="by-rank-num">01</span><span><b>纸间小饭</b><br><em>加入 42 天 · 文具收纳</em></span><span class="by-rank-score">+318%</span></div>
+          <div class="by-rank-item"><span class="by-rank-num">02</span><span><b>北窗工作室</b><br><em>加入 67 天 · 桌面复原</em></span><span class="by-rank-score">+264%</span></div>
+          <div class="by-rank-item"><span class="by-rank-num">03</span><span><b>阿哲的格子</b><br><em>加入 88 天 · 数码配件</em></span><span class="by-rank-score">+201%</span></div>
+          <div class="by-rank-item"><span class="by-rank-num">04</span><span><b>陈小舟</b><br><em>加入 95 天 · 移动办公</em></span><span class="by-rank-score">+176%</span></div>
+          <div class="by-rank-item"><span class="by-rank-num">05</span><span><b>安柏收纳笔记</b><br><em>加入 103 天 · 儿童房</em></span><span class="by-rank-score">+152%</span></div>
+        </div>
+
+        <div class="by-rank-col">
+          <h3><span>口碑</span>用户评分榜</h3>
+          <div class="by-rank-item"><span class="by-rank-num">01</span><span><b>模块化隔板 · 单格补件</b><br><em>1,284 条评价</em></span><span class="by-rank-score">4.9</span></div>
+          <div class="by-rank-item"><span class="by-rank-num">02</span><span><b>十二格整盒套装</b><br><em>2,061 条评价</em></span><span class="by-rank-score">4.8</span></div>
+          <div class="by-rank-item"><span class="by-rank-num">03</span><span><b>磁吸夹层配件</b><br><em>873 条评价</em></span><span class="by-rank-score">4.8</span></div>
+          <div class="by-rank-item"><span class="by-rank-num">04</span><span><b>旅行便携双层笔盒</b><br><em>654 条评价</em></span><span class="by-rank-score">4.7</span></div>
+          <div class="by-rank-item"><span class="by-rank-num">05</span><span><b>儿童安全圆角笔盒</b><br><em>512 条评价</em></span><span class="by-rank-score">4.7</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 专题企划 ===== -->
+  <section class="by-section by-special" id="bySpecial">
+    <div class="by-wrap">
+      <span class="by-eyebrow">专题企划 · 品牌共建</span>
+      <h2 class="by-h2">三个正在进行的笔盒专题</h2>
+      <p class="by-lead">专题由笔盒内容团队发起，邀请社区创作者共同完成。每个专题更新不少于 3 条内容，完结后整理为可下载的攻略合集。</p>
+
+      <div class="by-special-grid">
+        <article class="by-special-card by-special-wide">
+          <div class="by-special-cover">
+            <svg viewBox="0 0 640 420" role="img" aria-label="专题封面：一排不同职业的桌面小场景并置成网格">
+              <rect width="640" height="420" fill="#0e1a2b"/>
+              <rect x="40" y="46" width="170" height="130" rx="10" fill="#f4efe6"/>
+              <rect x="66" y="78" width="52" height="66" rx="6" fill="#0ea5a0"/>
+              <rect x="132" y="88" width="52" height="10" rx="5" fill="#0e1a2b" opacity=".5"/>
+              <rect x="132" y="108" width="38" height="10" rx="5" fill="#0e1a2b" opacity=".3"/>
+              <rect x="236" y="46" width="170" height="130" rx="10" fill="#e8a33d"/>
+              <circle cx="290" cy="112" r="26" fill="#0e1a2b" opacity=".7"/>
+              <rect x="332" y="92" width="50" height="10" rx="5" fill="#0e1a2b" opacity=".55"/>
+              <rect x="332" y="112" width="34" height="10" rx="5" fill="#0e1a2b" opacity=".35"/>
+              <rect x="432" y="46" width="170" height="130" rx="10" fill="#f4efe6"/>
+              <rect x="456" y="76" width="122" height="14" rx="7" fill="#0e1a2b" opacity=".55"/>
+              <rect x="456" y="102" width="84" height="14" rx="7" fill="#0ea5a0"/>
+              <rect x="456" y="128" width="104" height="14" rx="7" fill="#0e1a2b" opacity=".3"/>
+              <rect x="40" y="208" width="272" height="166" rx="10" fill="#f4efe6"/>
+              <rect x="66" y="234" width="90" height="114" rx="8" fill="#0ea5a0" opacity=".8"/>
+              <rect x="172" y="244" width="112" height="12" rx="6" fill="#0e1a2b" opacity=".55"/>
+              <rect x="172" y="270" width="86" height="12" rx="6" fill="#0e1a2b" opacity=".35"/>
+              <rect x="172" y="296" width="104" height="12" rx="6" fill="#0e1a2b" opacity=".25"/>
+              <circle cx="246" cy="342" r="18" fill="#e8a33d"/>
+              <rect x="332" y="208" width="270" height="166" rx="10" fill="#0e1a2b" stroke="#f4efe6" stroke-width="2"/>
+              <rect x="358" y="238" width="218" height="16" rx="8" fill="#e8a33d" opacity=".85"/>
+              <rect x="358" y="268" width="170" height="12" rx="6" fill="#f4efe6" opacity=".6"/>
+              <rect x="358" y="292" width="196" height="12" rx="6" fill="#f4efe6" opacity=".4"/>
+              <rect x="358" y="330" width="120" height="20" rx="10" fill="#0ea5a0"/>
+            </svg>
+          </div>
+          <div class="by-special-body">
+            <span class="by-special-status"><i></i>更新中 · 已发布 4 条 · 本期重点</span>
+            <h3>「一平方米计划」：六个职业的桌面复原实验</h3>
+            <p>我们邀请了程序员、插画师、教师、护士、手作人和自由摄影师，记录他们在一平方米桌面上的真实整理过程。重点不是好看，而是三个月后是否还在使用同一套方案。</p>
+            <ul class="by-special-list">
+              <li>第 1 条：程序员的双屏工作台与线材归位（已完成）</li>
+              <li>第 2 条：插画师的色卡墙与画稿索引（已完成）</li>
+              <li>第 3 条：教师的批改材料分层法（已完成）</li>
+              <li>第 4 条：护士的下班桌面与换班包打包术（已完成）</li>
+            </ul>
+            <div class="by-actions">
+              <button type="button" class="by-act by-act-share">分享专题</button>
+              <button type="button" class="by-act by-act-save">☆ 订阅更新</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="by-special-card">
+          <div class="by-special-cover">
+            <svg viewBox="0 0 640 400" role="img" aria-label="专题封面：抽屉里的分类小物与便签标签">
+              <rect width="640" height="400" fill="#f0e6d5"/>
+              <rect x="52" y="66" width="536" height="272" rx="14" fill="#fff"/>
+              <rect x="80" y="94" width="160" height="110" rx="8" fill="#0ea5a0" opacity=".8"/>
+              <rect x="256" y="94" width="160" height="110" rx="8" fill="#0f172a" opacity=".82"/>
+              <rect x="432" y="94" width="128" height="110" rx="8" fill="#e8a33d" opacity=".85"/>
+              <rect x="80" y="220" width="480" height="12" rx="6" fill="#0f172a" opacity=".18"/>
+              <rect x="80" y="248" width="308" height="12" rx="6" fill="#0f172a" opacity=".12"/>
+              <rect x="80" y="276" width="220" height="12" rx="6" fill="#0f172a" opacity=".1"/>
+              <rect x="80" y="304" width="140" height="20" rx="10" fill="#0ea5a0"/>
+            </svg>
+          </div>
+          <div class="by-special-body">
+            <span class="by-special-status"><i></i>更新中 · 已发布 3 条</span>
+            <h3>「抽屉里的时间」：旧物整理与标签系统</h3>
+            <p>从保修卡、发票到旅行纪念品，我们尝试用一套可检索的标签系统，让抽屉里的旧物重新被使用。</p>
+            <ul class="by-special-list">
+              <li>第 1 条：保修卡与说明书的电子化对照</li>
+              <li>第 2 条：发票与票据的三层分类法</li>
+              <li>第 3 条：纪念品的可见式收纳</li>
+            </ul>
+            <div class="by-actions">
+              <button type="button" class="by-act by-act-share">分享专题</button>
+              <button type="button" class="by-act by-act-save">☆ 订阅更新</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="by-special-card">
+          <div class="by-special-cover">
+            <svg viewBox="0 0 640 400" role="img" aria-label="专题封面：桌面上的移动办公收纳包与数码配件">
+              <rect width="640" height="400" fill="#101c2e"/>
+              <rect x="50" y="82" width="300" height="236" rx="18" fill="#f4efe6"/>
+              <rect x="80" y="112" width="80" height="56" rx="8" fill="#0ea5a0"/>
+              <rect x="176" y="112" width="80" height="56" rx="8" fill="#0f172a" opacity=".8"/>
+              <rect x="80" y="186" width="176" height="12" rx="6" fill="#0f172a" opacity=".35"/>
+              <rect x="80" y="210" width="120" height="12" rx="6" fill="#0f172a" opacity=".22"/>
+              <rect x="80" y="252" width="200" height="42" rx="10" fill="#e8a33d" opacity=".85"/>
+              <rect x="384" y="110" width="206" height="180" rx="16" fill="#0ea5a0" opacity=".85"/>
+              <rect x="410" y="140" width="154" height="20" rx="10" fill="#f4efe6" opacity=".85"/>
+              <rect x="410" y="176" width="112" height="14" rx="7" fill="#f4efe6" opacity=".6"/>
+              <rect x="410" y="202" width="132" height="14" rx="7" fill="#f4efe6" opacity=".4"/>
+              <circle cx="500" cy="252" r="18" fill="#0f172a" opacity=".7"/>
+            </svg>
+          </div>
+          <div class="by-special-body">
+            <span class="by-special-status"><i></i>即将开启 · 报名中</span>
+            <h3>「通勤 40 分钟」：移动办公收纳实录</h3>
+            <p>地铁、咖啡店、共享办公位——在不同地点之间切换时，什么该带、什么不该带？本专题联合五位移动办公者共同记录。</p>
+            <ul class="by-special-list">
+              <li>第 1 条：双肩包内的三层分区设计</li>
+              <li>第 2 条：线材与转接头的防缠绕方案</li>
+              <li>第 3 条：一周通勤的轻量清单</li>
+            </ul>
+            <div class="by-actions">
+              <button type="button" class="by-act by-act-share">分享专题</button>
+              <button type="button" class="by-act by-act-save">☆ 订阅更新</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 创作者矩阵 ===== -->
+  <section class="by-section by-authors" id="byAuthors">
+    <div class="by-wrap">
+      <span class="by-eyebrow">创作者矩阵 · 笔盒社区</span>
+      <h2 class="by-h2">和笔盒一起长期更新的六位创作者</h2>
+      <p class="by-lead">他们中有产品设计师、教师、木作爱好者，也有刚加入社区三个月的新人。我们相信多元的表达，才构成真实的内容生态。</p>
+
+      <div class="by-author-grid" id="byAuthorGrid">
+        <article class="by-author-card">
+          <div class="by-avatar by-av-1">林</div>
+          <div>
+            <h3>林一</h3>
+            <div class="by-author-field">桌面复原 · 空间整理</div>
+            <div class="by-author-nums"><span>作品 <b>86</b></span><span>粉丝 <b>42.6万</b></span><span>认证 <b>官方签约</b></span></div>
+            <p class="by-author-bio">前空间设计师，2019 年加入笔盒社区。擅长在小户型里寻找可复现的整理路径，坚持「先清空，再分类」的四步法。她的复原视频平均时长 14 分钟，被用户称为「可以跟着做的说明书」。</p>
+            <div class="by-author-more"><button type="button" class="by-act by-author-btn" data-by-author="林一">查看作者档案</button></div>
+          </div>
+        </article>
+
+        <article class="by-author-card">
+          <div class="by-avatar by-av-2">研</div>
+          <div>
+            <h3>笔盒实验室</h3>
+            <div class="by-author-field">深度测评 · 材料工艺</div>
+            <div class="by-author-nums"><span>作品 <b>134</b></span><span>粉丝 <b>28.1万</b></span><span>认证 <b>官方团队</b></span></div>
+            <p class="by-author-bio">笔盒官方内容团队下设的测评小组，由三名工业设计背景成员组成。所有测试产品自费购买，测试条件与失败案例如实公开。累计发布 134 条对照实验，包括合页寿命、内衬耐磨与承压测试。</p>
+            <div class="by-author-more"><button type="button" class="by-act by-author-btn" data-by-author="笔盒实验室">查看作者档案</button></div>
+          </div>
+        </article>
+
+        <article class="by-author-card">
+          <div class="by-avatar by-av-3">禾</div>
+          <div>
+            <h3>阿禾</h3>
+            <div class="by-author-field">插画创作 · 桌面美学</div>
+            <div class="by-author-nums"><span>作品 <b>52</b></span><span>粉丝 <b>18.7万</b></span><span>认证 <b>品质创作者</b></span></div>
+            <p class="by-author-bio">自由插画师，日常在一张 1.2 米的桌子上完成商业稿与个人创作。她关注桌面与创作状态之间的关系，作品里经常出现色卡墙、画稿索引与分格工具盒。她认为整理不是洁癖，而是让灵感有地方落脚。</p>
+            <div class="by-author-more"><button type="button" class="by-act by-author-btn" data-by-author="阿禾">查看作者档案</button></div>
+          </div>
+        </article>
+
+        <article class="by-author-card">
+          <div class="by-avatar by-av-4">满</div>
+          <div>
+            <h3>小满同学</h3>
+            <div class="by-author-field">宿舍整理 · 学生日常</div>
+            <div class="by-author-nums"><span>作品 <b>31</b></span><span>粉丝 <b>9.4万</b></span><span>认证 <b>新人成长</b></span></div>
+            <p class="by-author-bio">大四在读，住在 4 平方米的宿舍床位。她用手边材料完成了七处可复原改造，全部不使用打孔工具。视频节奏轻快、步骤清晰，被很多新生当作入学前的收纳参考，也让她在三个月内进入新人成长榜首位。</p>
+            <div class="by-author-more"><button type="button" class="by-act by-author-btn" data-by-author="小满同学">查看作者档案</button></div>
+          </div>
+        </article>
+
+        <article class="by-author-card">
+          <div class="by-avatar by-av-5">周</div>
+          <div>
+            <h3>老周木作</h3>
+            <div class="by-author-field">手作DIY · 旧物改造</div>
+            <div class="by-author-nums"><span>作品 <b>47</b></span><span>粉丝 <b>13.2万</b></span><span>认证 <b>品质创作者</b></span></div>
+            <p class="by-author-bio">木作爱好者，白天是结构工程师，晚上在阳台上做木活。他喜欢把旧抽屉、旧书立改造成新的收纳工具，视频里从不隐藏失败与返工。他说手作的意义在于让一件旧物继续被需要，而不是被展示。</p>
+            <div class="by-author-more"><button type="button" class="by-act by-author-btn" data-by-author="老周木作">查看作者档案</button></div>
+          </div>
+        </article>
+
+        <article class="by-author-card">
+          <div class="by-avatar by-av-6">舟</div>
+          <div>
+            <h3>陈小舟</h3>
+            <div class="by-author-field">移动办公 · 数码收纳</div>
+            <div class="by-author-nums"><span>作品 <b>39</b></span><span>粉丝 <b>11.5万</b></span><span>认证 <b>官方签约</b></span></div>
+            <p class="by-author-bio">自由摄影师，一年有八个月在不同城市工作。他研究如何在 40 分钟通勤与陌生工作位之间保持稳定的工作状态，线材、存储卡、备用电池都有固定位置。他的视频常被用户收藏为「出差前必看」。</p>
+            <div class="by-author-more"><button type="button" class="by-act by-author-btn" data-by-author="陈小舟">查看作者档案</button></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 图文索引 ===== -->
+  <section class="by-section by-index" id="byIndex">
+    <div class="by-wrap">
+      <span class="by-eyebrow">图文索引 · 攻略与清单</span>
+      <h2 class="by-h2">可以打印下来贴在墙上的三份清单</h2>
+      <p class="by-lead">视频之外，我们也把方法整理成文字与表格。以下三份索引长期维护，欢迎下载、打印与二次整理。</p>
+
+      <div class="by-index-grid">
+        <article class="by-index-card">
+          <svg viewBox="0 0 480 300" role="img" aria-label="图文索引封面：写着四步复原法的清单纸与铅笔">
+            <rect width="480" height="300" fill="#eaf1f0"/>
+            <rect x="60" y="34" width="250" height="232" rx="8" fill="#fff" transform="rotate(-3 185 150)"/>
+            <rect x="88" y="70" width="120" height="12" rx="6" fill="#0f172a" opacity=".6"/>
+            <rect x="88" y="102" width="180" height="8" rx="4" fill="#0f172a" opacity=".26"/>
+            <rect x="88" y="124" width="150" height="8" rx="4" fill="#0f172a" opacity=".22"/>
+            <rect x="88" y="146" width="170" height="8" rx="4" fill="#0f172a" opacity=".18"/>
+            <rect x="88" y="182" width="90" height="26" rx="13" fill="#0ea5a0"/>
+            <rect x="330" y="150" width="14" height="110" rx="7" fill="#e8a33d" transform="rotate(18 337 205)"/>
+            <circle cx="376" cy="80" r="34" fill="#0f172a" opacity=".12"/>
+          </svg>
+          <div class="by-index-body">
+            <h3>桌面复原四步法 · 可打印清单</h3>
+            <p>清空、分类、留白、归位。附一页物品计数表与一页标签模板，适合第一次做完整复原的人。</p>
+            <a class="by-index-link" href="#byVideos">查看对应视频 →</a>
+          </div>
+        </article>
+
+        <article class="by-index-card">
+          <svg viewBox="0 0 480 300" role="img" aria-label="图文索引封面：分格笔盒的尺寸标注图与卷尺">
+            <rect width="480" height="300" fill="#f3ead9"/>
+            <rect x="54" y="86" width="372" height="140" rx="12" fill="#0f172a"/>
+            <rect x="76" y="108" width="94" height="96" rx="6" fill="#f4efe6" opacity=".9"/>
+            <rect x="186" y="108" width="94" height="96" rx="6" fill="#f4efe6" opacity=".65"/>
+            <rect x="296" y="108" width="106" height="96" rx="6" fill="#f4efe6" opacity=".45"/>
+            <path d="M54 254h372" stroke="#0ea5a0" stroke-width="4"/>
+            <path d="M54 244v20M426 244v20" stroke="#0ea5a0" stroke-width="4"/>
+            <rect x="196" y="268" width="88" height="16" rx="8" fill="#0ea5a0" opacity=".8"/>
+          </svg>
+          <div class="by-index-body">
+            <h3>模块化隔板尺寸对照表</h3>
+            <p>常用单格规格、组合方式与适配场景，一页看懂如何搭配整盒套装与补件，避免重复购买。</p>
+            <a class="by-index-link" href="#byRank">查看口碑评分 →</a>
+          </div>
+        </article>
+
+        <article class="by-index-card">
+          <svg viewBox="0 0 480 300" role="img" aria-label="图文索引封面：移动办公小包的分层结构与备份卡">
+            <rect width="480" height="300" fill="#0f172a"/>
+            <rect x="70" y="52" width="340" height="196" rx="16" fill="#0ea5a0" opacity=".82"/>
+            <rect x="96" y="78" width="288" height="52" rx="8" fill="#f4efe6" opacity=".9"/>
+            <rect x="96" y="142" width="136" height="82" rx="8" fill="#f4efe6" opacity=".65"/>
+            <rect x="246" y="142" width="138" height="82" rx="8" fill="#e8a33d" opacity=".85"/>
+            <circle cx="400" cy="240" r="22" fill="#f4efe6" opacity=".3"/>
+          </svg>
+          <div class="by-index-body">
+            <h3>通勤与出差的轻量收纳包清单</h3>
+            <p>按「必带、可替代、应急」三层准备的 23 件物品清单，附拍摄器材与电池备份建议。</p>
+            <a class="by-index-link" href="#bySpecial">查看专题进度 →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 用户评价 ===== -->
+  <section class="by-section by-reviews" id="byReviews">
+    <div class="by-wrap">
+      <span class="by-eyebrow">用户口碑 · 真实反馈</span>
+      <h2 class="by-h2">来自笔盒用户的六条真实评价</h2>
+      <p class="by-lead">以下评价来自笔盒官方网站用户中心，未做删改。我们保留不同长度的声音，包括建议与批评。</p>
+
+      <div class="by-review-grid">
+        <article class="by-review">
+          <div class="by-review-top">
+            <span class="by-review-avatar by-av-1">沈</span>
+            <div>
+              <div class="by-review-name">沈女士</div>
+              <div class="by-review-date">2026-11-08 · 已购十二格套装</div>
+            </div>
+            <span class="by-stars">★★★★★</span>
+          </div>
+          <p>用了两年，合页依然很紧。最满意的是可以单买一格补件，孩子长大后我调整了格子分配，不用整盒换掉。希望以后能出更多颜色的内衬。</p>
+          <span class="by-review-tag">复购用户 · 品质</span>
+        </article>
+
+        <article class="by-review">
+          <div class="by-review-top">
+            <span class="by-review-avatar by-av-3">顾</span>
+            <div>
+              <div class="by-review-name">顾一鸣</div>
+              <div class="by-review-date">2026-11-03 · 已购旅行双层笔盒</div>
+            </div>
+            <span class="by-stars">★★★★☆</span>
+          </div>
+          <p>出差带着很方便，线材也有位置了。唯一想提的是外层拉链阻尼感偏紧，单手不太容易拉开，希望下一代能优化。视频教程很实用，我按攻略重新排了包内分区。</p>
+          <span class="by-review-tag">建议反馈 · 移动办公</span>
+        </article>
+
+        <article class="by-review">
+          <div class="by-review-top">
+            <span class="by-review-avatar by-av-2">林</span>
+            <div>
+              <div class="by-review-name">林小满</div>
+              <div class="by-review-date">2026-10-29 · 社区创作者</div>
+            </div>
+            <span class="by-stars">★★★★★</span>
+          </div>
+          <p>参加整理挑战赛让我第一次完整拍完一条视频，官方给的拍摄手册很有用，连机位角度都标出来了。评委的评分反馈也写得很具体，不是那种敷衍的「继续加油」。</p>
+          <span class="by-review-tag">挑战赛 · 创作者</span>
+        </article>
+
+        <article class="by-review">
+          <div class="by-review-top">
+            <span class="by-review-avatar by-av-4">何</span>
+            <div>
+              <div class="by-review-name">何老师</div>
+              <div class="by-review-date">2026-10-18 · 批量采购</div>
+            </div>
+            <span class="by-stars">★★★★★</span>
+          </div>
+          <p>班级采购了 42 只儿童款。圆角处理确实到位，家长反馈也没有异味。最实用的是官方网站上的班级收纳方案，我们照着做了作业本和教具的两套格子，学期中再也没有出现找不到东西的情况。</p>
+          <span class="by-review-tag">教育场景 · 安心</span>
+        </article>
+
+        <article class="by-review">
+          <div class="by-review-top">
+            <span class="by-review-avatar by-av-5">苏</span>
+            <div>
+              <div class="by-review-name">苏苏</div>
+              <div class="by-review-date">2026-11-12 · 新用户</div>
+            </div>
+            <span class="by-stars">★★★★☆</span>
+          </div>
+          <p>第一次买桌面收纳，页面上的尺寸对照表帮我省了很多事。不过我是租房，桌面尺寸偏小，希望官方能多拍一些 1 米以内的方案。视频里的复原计划很有陪伴感，周末跟着做完了。</p>
+          <span class="by-review-tag">新用户 · 小户型</span>
+        </article>
+
+        <article class="by-review">
+          <div class="by-review-top">
+            <span class="by-review-avatar by-av-6">老</span>
+            <div>
+              <div class="by-review-name">老周</div>
+              <div class="by-review-date">2026-09-30 · 品质创作者</div>
+            </div>
+            <span class="by-stars">★★★★★</span>
+          </div>
+          <p>从看别人的视频到拍自己的视频，三年了。笔盒没有把我当成流量，而是当成一个可以慢慢做的人。旧物改造的稿子被推荐到首页那天，我女儿第一次主动看了我的视频。</p>
+          <span class="by-review-tag">长期陪伴 · 手作</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 灵感 / FAQ / 企业动态 ===== -->
+  <section class="by-section by-aside" id="byHelp">
+    <div class="by-wrap by-aside-grid">
+      <div>
+        <span class="by-eyebrow">创作灵感 · 工具助手</span>
+        <h2 class="by-h2">不知道从哪拍起？先点一个方向</h2>
+        <div class="by-inspire">
+          <h3>笔盒灵感助手</h3>
+          <p>根据你手边的桌面状态，生成一个可以立即开拍的选题方向与三步拍摄思路。结果仅为灵感提示，不涉及任何个人数据。</p>
+          <div class="by-inspire-tags" id="byInspireTags">
+            <button type="button" data-by-idea="桌面上所有物品摊开，按使用频率分成三堆，先只归位最常用的一堆。">桌面很乱不知道从哪开始</button>
+            <button type="button" data-by-idea="从一只笔盒出发，拍它今天装了什么、不装什么，用一镜到底完成。">物品不多但总是找不到</button>
+            <button type="button" data-by-idea="记录一次搬家打包，按房间分格子，最后统计每个格子被打开的频次。">要搬家了想拍个记录</button>
+            <button type="button" data-by-idea="把旧抽屉改造成分格笔盒，完整保留返工与失败的过程。">想做一次旧物改造</button>
+          </div>
+          <div class="by-inspire-out" id="byInspireOut">点击上方任意方向，查看笔盒给你的三条拍摄提示。</div>
+        </div>
+
+        <h2 class="by-h2" style="margin-top:8px">笔盒 FAQ：常见问题</h2>
+        <div class="by-faq" id="byFaq">
+          <details open>
+            <summary>笔盒官网入口在哪里可以找到官方产品？</summary>
+            <p>页面顶部的导航与首屏按钮均可进入官方内容与产品区。笔盒官方网站提供整盒套装、模块化隔板与单格补件的完整信息，并标注尺寸、材质与适配说明。</p>
+          </details>
+          <details>
+            <summary>隔板可以单独购买吗？会不会有断货？</summary>
+            <p>可以。笔盒采用模块化设计，单格隔板与配件长期供应。热门规格可能出现短暂缺货，页面会标注补货时间，建议开启更新提醒。</p>
+          </details>
+          <details>
+            <summary>整理挑战赛如何报名，需要专业设备吗？</summary>
+            <p>登录社区账号后进入挑战赛页面即可报名，手机拍摄完全可以。报名后会收到《拍摄引导手册》，包含机位、光线与字幕建议。评分维度公开，复现性占比最高。</p>
+          </details>
+          <details>
+            <summary>投稿的视频会用于商业用途吗？</summary>
+            <p>不会自动用于商业用途。所有商业合作、转载与二次剪辑都会单独签署授权文件。创作者可以随时在后台撤回自己的作品。</p>
+          </details>
+          <details>
+            <summary>笔盒内容多久更新一次？</summary>
+            <p>官方影像每周三与周六更新，专题与榜单每周一更新。企业动态与社区活动会通过页面顶部公告条同步发布。</p>
+          </details>
+          <details>
+            <summary>可以申请成为签约创作者吗？</summary>
+            <p>可以。社区主页有申请入口，需提交三条原创内容与一份整理方法说明。我们更看重方法是否可复现，而不是粉丝数量。</p>
+          </details>
+          <details>
+            <summary>产品保修与售后如何处理？</summary>
+            <p>笔盒为五金与合页提供三年保修，其他部件按批次说明执行。保修卡可在抽屉收纳专题中找到电子化对照方式，避免纸质卡片丢失。</p>
+          </details>
+        </div>
+      </div>
+
+      <div>
+        <span class="by-eyebrow">企业动态 · 更新日志</span>
+        <h2 class="by-h2">笔盒最近的四条消息</h2>
+        <div class="by-news">
+          <div class="by-news-item">
+            <div class="by-news-date">11 月<b>18</b>日</div>
+            <div>
+              <h4>「一格一物」整理挑战赛第 3 季开启报名</h4>
+              <p>新增六个收纳赛道，报名截止至 12 月 8 日，获奖方案将整理为永久可下载攻略。</p>
+            </div>
+          </div>
+          <div class="by-news-item">
+            <div class="by-news-date">11 月<b>12</b>日</div>
+            <div>
+              <h4>桌面复原计划第 08 集上线</h4>
+              <p>本期首次公开完整的 217 件物品清点表，附可编辑模板，用户可在社区下载。</p>
+            </div>
+          </div>
+          <div class="by-news-item">
+            <div class="by-news-date">11 月<b>05</b>日</div>
+            <div>
+              <h4>模块化隔板新增三种规格</h4>
+              <p>针对小户型与数码配件场景补充 4cm、7cm 与双层夹层规格，单格补件同步上架。</p>
+            </div>
+          </div>
+          <div class="by-news-item">
+            <div class="by-news-date">10 月<b>28</b>日</div>
+            <div>
+              <h4>笔盒与三家独立文具品牌达成内容合作</h4>
+              <p>合作内容将在专题区陆续上线，所有测评仍由笔盒实验室独立完成，不接受付费排名。</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="font-size:17px;margin:26px 0 4px">合作品牌与伙伴</h3>
+        <p class="by-lead" style="font-size:13.5px">我们与坚持原创与品质的品牌一起，持续为社区提供可信赖的收纳方案。</p>
+        <div class="by-partners">
+          <span>木言工作室</span>
+          <span>纸间社</span>
+          <span>晨光计划</span>
+          <span>北窗文具</span>
+          <span>有格设计</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 挑战赛 CTA ===== -->
+  <section class="by-cta" id="byChallenge">
+    <div class="by-wrap by-cta-inner">
+      <div>
+        <h2>你的桌面，值得被认真地整理一次</h2>
+        <p>报名「一格一物」整理挑战赛，上传你的复原视频，赢取年度联名笔盒与官方签约机会。所有参赛作品都会得到具体评分反馈。</p>
+      </div>
+      <div class="by-cta-actions">
+        <button type="button" class="by-btn" id="byJoinBtn">立即报名参赛</button>
+        <button type="button" class="by-btn by-btn-ghost" id="bySubmitBtn">投稿与联系</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== 评论区 ===== -->
+<section class="by-section by-comments" id="byComments">
+  <div class="by-wrap">
+    <span class="by-eyebrow">社区评论 · 开放讨论</span>
+    <h2 class="by-h2">关于笔盒，大家在聊什么</h2>
+    <p class="by-lead">评论来自笔盒社区公开讨论区，按时间排序。我们鼓励具体、真实、有建设性的表达。</p>
+
+    <div class="by-comment-grid">
+      <article class="by-comment">
+        <div class="by-comment-top">
+          <span class="by-avatar by-av-2" style="width:32px;height:32px;font-size:13px">阿</span>
+          <span class="by-comment-name">阿哲的格子</span>
+          <span class="by-comment-time">11-20 21:14</span>
+        </div>
+        <p>第 08 集里那个「先只归位最常用的一堆」对我帮助最大。我之前总想一次整理完，结果三天就乱了。现在只处理一层，反而维持住了。</p>
+        <div class="by-comment-foot">
+          <button type="button" class="by-comment-like" data-by-count="46">♡ 46</button>
+          <button type="button" class="by-act-share">回复</button>
+        </div>
+      </article>
+
+      <article class="by-comment">
+        <div class="by-comment-top">
+          <span class="by-avatar by-av-3" style="width:32px;height:32px;font-size:13px">北</span>
+          <span class="by-comment-name">北窗工作室</span>
+          <span class="by-comment-time">11-20 18:02</span>
+        </div>
+        <p>想问下模块化隔板的单格补件能搭配旧款吗？我 2022 年买的整盒，尺寸看着好像有一点差别。</p>
+        <div class="by-comment-foot">
+          <button type="button" class="by-comment-like" data-by-count="18">♡ 18</button>
+          <button type="button" class="by-act-share">回复</button>
+        </div>
+      </article>
+
+      <article class="by-comment">
+        <div class="by-comment-top">
+          <span class="by-avatar by-av-1" style="width:32px;height:32px;font-size:13px">纸</span>
+          <span class="by-comment-name">纸间小饭</span>
+          <span class="by-comment-time">11-19 09:41</span>
+        </div>
+        <p>作为刚加入 42 天的新人，看到自己上了成长榜有点意外。官方给的评分反馈提到「可复现性」写得很细，我照着改了下一条，播放确实涨了。</p>
+        <div class="by-comment-foot">
+          <button type="button" class="by-comment-like" data-by-count="72">♡ 72</button>
+          <button type="button" class="by-act-share">回复</button>
+        </div>
+      </article>
+
+      <article class="by-comment">
+        <div class="by-comment-top">
+          <span class="by-avatar by-av-4" style="width:32px;height:32px;font-size:13px">安</span>
+          <span class="by-comment-name">安柏收纳笔记</span>
+          <span class="by-comment-time">11-18 22:07</span>
+        </div>
+        <p>儿童房的专题什么时候更新？我家里两个孩子的书桌完全不一样，一个喜欢把东西摊开，一个喜欢全部收进抽屉，很想看到不同的处理方案。</p>
+        <div class="by-comment-foot">
+          <button type="button" class="by-comment-like" data-by-count="33">♡ 33</button>
+          <button type="button" class="by-act-share">回复</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 页脚 ===== -->
+<footer class="by-footer">
+  <div class="by-wrap">
+    <div class="by-footer-grid">
+      <div>
+        <a class="by-logo" href="#byHome" style="margin-bottom:14px">
+          <span class="by-logo-mark" aria-hidden="true"></span>
+          <span class="by-logo-text">
+            <span class="by-logo-name">笔盒</span>
+            <span class="by-logo-sub">DAYBOX OFFICIAL</span>
+          </span>
+        </a>
+        <p>笔盒是专注桌面收纳与文具整理的原创品牌与内容平台，以「一格一物」为方法，为创意工作者、学生与自由职业者提供值得信赖的产品与高清影像内容。笔盒官方网站持续运营中。</p>
+        <div class="by-footer-badges">
+          <span>原创设计</span>
+          <span>正版内容</span>
+          <span>三年保修</span>
+          <span>用户至上</span>
+        </div>
+      </div>
+
+      <div>
+        <h4>内容导航</h4>
+        <ul class="by-footer-links">
+          <li><a href="#byVideos">精品内容</a></li>
+          <li><a href="#bySpecial">专题企划</a></li>
+          <li><a href="#byRank">数据榜单</a></li>
+          <li><a href="#byIndex">图文索引</a></li>
+          <li><a href="#byComments">社区评论</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>品牌与社区</h4>
+        <ul class="by-footer-links">
+          <li><a href="#byAbout">品牌故事</a></li>
+          <li><a href="#byAuthors">创作者矩阵</a></li>
+          <li><a href="#byReviews">用户口碑</a></li>
+          <li><a href="#byChallenge">整理挑战赛</a></li>
+          <li><a href="#byHelp">帮助中心</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>联系我们</h4>
+        <ul class="by-footer-links">
+          <li>内容合作：content@daybox-official.example</li>
+          <li>商务与采购：brand@daybox-official.example</li>
+          <li>社区投稿：进入「投稿与联系」打开表单</li>
+          <li>服务时间：工作日 10:00 - 19:00</li>
+        </ul>
+        <div class="by-actions" style="margin-top:12px">
+          <button type="button" class="by-act by-act-share" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.2);color:#d7dce8">复制链接</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="by-footer-bottom">
+      <span>© 2016 - 2026 笔盒（Daybox）官方网站 · 版权所有 · 持续运营中</span>
+      <span>浙 ICP 备 2026018842 号 · 浙公网安备 33010602018842 号</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== 通用弹窗 ===== -->
+<div class="by-modal-mask" id="byModalMask" role="dialog" aria-modal="true" aria-label="信息弹窗">
+  <div class="by-modal">
+    <button type="button" class="by-modal-close" id="byModalClose" aria-label="关闭弹窗">×</button>
+    <div id="byModalBody"></div>
+  </div>
+</div>
+
+<div class="by-toast" id="byToast" role="status" aria-live="polite"></div>
+<button type="button" class="by-top-btn" id="byTopBtn" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('byToast');
+  var toastTimer = null;
+  function toast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('by-toast-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){
+      toastEl.classList.remove('by-toast-show');
+    }, 2200);
+  }
+
+  /* ---------- 移动端导航折叠 ---------- */
+  var navToggle = document.getElementById('byNavToggle');
+  var nav = document.getElementById('byNav');
+  if(navToggle && nav){
+    navToggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('by-nav-open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('by-nav-open');
+        navToggle.setAttribute('aria-expanded','false');
+      }
+    });
+    // 导航高亮
+    var navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(function(link){
+      link.addEventListener('click', function(){
+        navLinks.forEach(function(l){ l.classList.remove('by-nav-active'); });
+        link.classList.add('by-nav-active');
+      });
+    });
+  }
+
+  /* ---------- 搜索反馈 ---------- */
+  var searchInput = document.getElementById('bySearchInput');
+  var searchBtn = document.getElementById('bySearchBtn');
+  function doSearch(){
+    var kw = (searchInput && searchInput.value || '').trim();
+    if(!kw){
+      toast('请输入关键词，例如「笔盒」「隔板」「桌面复原」');
+      if(searchInput) searchInput.focus();
+      return;
+    }
+    var low = kw.toLowerCase();
+    var valid = ['笔盒','收纳','文具','桌面','隔板','补件','整理','复原','抽屉','通勤','挑战赛','视频','攻略','创作者'];
+    var hit = valid.filter(function(v){ return low.indexOf(v) !== -1; });
+    if(hit.length){
+      toast('已为你找到与「' + kw + '」相关的精品内容，可用于筛选浏览');
+      var target = document.getElementById('byVideoList');
+      if(target && target.scrollIntoView){
+        target.scrollIntoView({behavior:'smooth', block:'center'});
+      }
+    }else{
+      toast('「' + kw + '」暂无完全匹配内容，试试「笔盒」「收纳」「桌面复原」');
+    }
+  }
+  if(searchBtn) searchBtn.addEventListener('click', doSearch);
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+    });
+  }
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest ? e.target.closest('.by-act-like') : null;
+    if(likeBtn){
+      var numEl = likeBtn.querySelector('.by-like-num');
+      var base = parseInt(numEl ? numEl.textContent.replace(/[^\d]/g,'') : likeBtn.getAttribute('data-by-count'), 10) || 0;
+      var on = likeBtn.classList.toggle('by-act-on');
+      var next = on ? base + 1 : Math.max(0, base - 1);
+      if(numEl) numEl.textContent = next.toLocaleString('en-US');
+      toast(on ? '已点赞，感谢你的支持' : '已取消点赞');
+      return;
+    }
+    var saveBtn = e.target.closest ? e.target.closest('.by-act-save') : null;
+    if(saveBtn){
+      var saved = saveBtn.classList.toggle('by-act-on');
+      saveBtn.textContent = saved ? '★ 已收藏' : '☆ 收藏';
+      toast(saved ? '已加入你的收藏夹' : '已从收藏夹移除');
+      return;
+    }
+    var clike = e.target.closest ? e.target.closest('.by-comment-like') : null;
+    if(clike){
+      var cbase = parseInt(clike.getAttribute('data-by-count'), 10) || 0;
+      var con = clike.classList.toggle('by-act-on');
+      var cnext = con ? cbase + 1 : cbase;
+      clike.setAttribute('data-by-count', String(cnext));
+      clike.textContent = '♡ ' + cnext;
+      toast(con ? '已表达你的认同' : '已取消');
+      return;
+    }
+  });
+
+  /* ---------- 弹窗基础 ---------- */
+  var mask = document.getElementById('byModalMask');
+  var modalBody = document.getElementById('byModalBody');
+  var modalClose = document.getElementById('byModalClose');
+  function openModal(html){
+    if(!mask || !modalBody) return;
+    modalBody.innerHTML = html;
+    mask.classList.add('by-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    if(!mask) return;
+    mask.classList.remove('by-open');
+    document.body.style.overflow = '';
+  }
+  if(modalClose) modalClose.addEventListener('click', closeModal);
+  if(mask) mask.addEventListener('click', function(e){
+    if(e.target === mask) closeModal();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeModal();
+  });
+
+  /* ---------- 作者信息弹窗 ---------- */
+  var authorData = {
+    '林一': {field:'桌面复原 · 空间整理', works:'86', fans:'42.6万', bio:'前空间设计师，2019 年加入笔盒社区，是官方签约创作者之一。擅长在小户型与合租环境中寻找可复现的整理路径，提出「清空、分类、留白、归位」四步复原法。视频常附可下载清单，被用户当作操作说明使用。', badge:'官方签约 · 品质创作者'},
+    '笔盒实验室': {field:'深度测评 · 材料工艺', works:'134', fans:'28.1万', bio:'笔盒官方网站内容团队下设的测评小组，三名成员均来自工业设计背景。所有测试产品由团队自费购买，测试条件、失败案例与原始数据均公开。测评方向包括合页寿命、内衬耐磨、承压与温差形变。', badge:'官方团队 · 独立测评'},
+    '阿禾': {field:'插画创作 · 桌面美学', works:'52', fans:'18.7万', bio:'自由插画师，在一张 1.2 米的桌子上完成商业稿与个人创作。她关注桌面秩序与创作状态之间的关联，作品经常出现色卡墙、画稿索引与分格工具盒。她认为整理不是洁癖，而是让灵感有地方落脚。', badge:'品质创作者 · 艺术美学'},
+    '小满同学': {field:'宿舍整理 · 学生日常', works:'31', fans:'9.4万', bio:'大四在读，住在 4 平方米的宿舍床位。她用手边材料完成七处可复原改造，全部不使用打孔工具。视频节奏轻快、步骤清晰，被许多新生当作入学前的收纳参考，也在三个月内进入新人成长榜首位。', badge:'新人成长 · 学生创作者'},
+    '老周木作': {field:'手作DIY · 旧物改造', works:'47', fans:'13.2万', bio:'木作爱好者，白天是结构工程师，晚上在阳台上做木活。他喜欢把旧抽屉、旧书立改造成新的收纳工具，视频里从不隐藏失败与返工。他说手作的意义在于让一件旧物继续被需要，而不是被展示。', badge:'品质创作者 · 手作'},
+    '陈小舟': {field:'移动办公 · 数码收纳', works:'39', fans:'11.5万', bio:'自由摄影师，一年有八个月在不同城市工作。他研究如何在 40 分钟通勤与陌生工作位之间保持稳定的工作状态，线材、存储卡、备用电池都有固定位置。他的视频常被用户收藏为「出差前必看」。', badge:'官方签约 · 移动办公'}
+  };
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest ? e.target.closest('.by-author-btn') : null;
+    if(!btn) return;
+    var name = btn.getAttribute('data-by-author');
+    var d = authorData[name];
+    if(!d) return;
+    openModal(
+      '<div class="by-modal-profile">' +
+        '<span class="by-avatar by-av-1" style="width:56px;height:56px;font-size:20px">' + name.charAt(0) + '</span>' +
+        '<div><h3 style="margin:0">' + name + '</h3><div class="by-author-field">' + d.field + '</div></div>' +
+      '</div>' +
+      '<p>' + d.bio + '</p>' +
+      '<ul class="by-special-list" style="margin-top:6px">' +
+        '<li>作品数量：' + d.works + ' 条（截至 2026 年 11 月）</li>' +
+        '<li>社区粉丝：' + d.fans + '</li>' +
+        '<li>身份标识：' + d.badge + '</li>' +
+        '<li>内容方向：全部为笔盒官方网站原创或授权发布</li>' +
+      '</ul>' +
+      '<div class="by-modal-row">' +
+        '<button type="button" class="by-btn by-btn-teal" data-by-close>关注创作者</button>' +
+        '<button type="button" class="by-btn by-btn-ghost" data-by-close>关闭</button>' +
+      '</div>'
+    );
+  });
+
+  /* ---------- 分享 / 复制链接 ---------- */
+  function fallbackCopy(text){
+    try{
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly','');
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      return true;
+    }catch(err){
+      return false;
+    }
+  }
+  function copyPageLink(){
+    var text = '笔盒官网入口 · 每一格都有归属';
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){
+        toast('已复制分享文案，可粘贴到聊天窗口');
+      }).catch(function(){
+        if(fallbackCopy(text)){ toast('已复制分享文案'); }
+        else{ toast('复制失败，请手动选择页面文字分享'); }
+      });
+    }else{
+      if(fallbackCopy(text)){ toast('已复制分享文案'); }
+      else{ toast('复制失败，请手动选择页面文字分享'); }
+    }
+  }
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest ? e.target.closest('.by-act-share') : null;
+    if(!btn) return;
+    openModal(
+      '<h3>分享笔盒</h3>' +
+      '<p>把「笔盒官网入口」分享给正在整理桌面的朋友。</p>' +
+      '<div class="by-share-list">' +
+        '<button type="button" data-by-copy>复制分享文案</button>' +
+        '<button type="button" data-by-share="微信">微信</button>' +
+        '<button type="button" data-by-share="微博">微博</button>' +
+        '<button type="button" data-by-share="QQ">QQ</button>' +
+      '</div>' +
+      '<p style="margin-top:14px;font-size:12.5px;color:#6b7185">提示：第三方平台分享需在对应应用内完成，本站不发起外部请求。</p>'
+    );
+  });
+  document.addEventListener('click', function(e){
+    var copyBtn = e.target.closest ? e.target.closest('[data-by-copy]') : null;
+    if(copyBtn){ copyPageLink(); return; }
+    var shareBtn = e.target.closest ? e.target.closest('[data-by-share]') : null;
+    if(shareBtn){
+      toast('请打开「' + shareBtn.getAttribute('data-by-share') + '」粘贴分享文案');
+      return;
+    }
+    var closeBtn = e.target.closest ? e.target.closest('[data-by-close]') : null;
+    if(closeBtn){ closeModal(); toast('已关注，后续更新会出现在社区首页'); return; }
+  });
+
+  /* ---------- 下载清单 ---------- */
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest ? e.target.closest('.by-act-download') : null;
+    if(!btn) return;
+    openModal(
+      '<h3>下载《桌面复原四步法》清单</h3>' +
+      '<p>清单包含：物品计数表、四步流程对照、标签模板与三个月复检表。所有内容为笔盒官方网站原创，允许个人打印使用，转载需注明出处。</p>' +
+      '<ul class="by-special-list">' +
+        '<li>第一步 清空：把所有物品移到地面或备用桌面</li>' +
+        '<li>第二步 分类：按使用频率分为常用、备用、留存</li>' +
+        '<li>第三步 留白：为每个格子保留至少 20% 空间</li>' +
+        '<li>第四步 归位：贴上标签，设定三个月复检日</li>' +
+      '</ul>' +
+      '<div class="by-modal-row"><button type="button" class="by-btn by-btn-teal" data-by-download-confirm>确认下载</button><button type="button" class="by-btn by-btn-ghost" data-by-close>稍后再说</button></div>'
+    );
+  });
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-by-download-confirm]') : null;
+    if(b){ closeModal(); toast('清单已加入下载队列，请留意社区消息通知'); }
+  });
+
+  /* ---------- 报名 / 投稿弹窗 ---------- */
+  var joinBtn = document.getElementById('byJoinBtn');
+  var submitBtn = document.getElementById('bySubmitBtn');
+  if(joinBtn){
+    joinBtn.addEventListener('click', function(){
+      openModal(
+        '<h3>「一格一物」整理挑战赛 · 报名</h3>' +
+        '<p>第 3 季共开放六个赛道：小户型、宿舍、儿童房、手作台、移动办公、数码配件。报名后将收到《拍摄引导手册》与评分维度说明。</p>' +
+        '<ul class="by-special-list">' +
+          '<li>报名时间：2026-11-18 至 2026-12-08</li>' +
+          '<li>作品要求：原创视频，时长 3 至 15 分钟，需展示完整整理过程</li>' +
+          '<li>评分维度：可复现性 40%、整理逻辑 30%、影像表达 20%、社区互动 10%</li>' +
+        '</ul>' +
+        '<div class="by-modal-row"><button type="button" class="by-btn by-btn-teal" data-by-join-confirm>确认报名</button><button type="button" class="by-btn by-btn-ghost" data-by-close>取消</button></div>'
+      );
+    });
+  }
+  if(submitBtn){
+    submitBtn.addEventListener('click', function(){
+      openModal(
+        '<h3>投稿与联系</h3>' +
+        '<p>欢迎把你的整理方案、旧物改造过程或桌面记录投递给笔盒。我们每周集中查看一次投稿，并在 7 个工作日内回复。</p>' +
+        '<ul class="by-special-list">' +
+          '<li>内容投稿：需附视频链接或素材说明、拍摄时间与地点</li>' +
+          '<li>商务合作：请注明品牌与项目背景</li>' +
+          '<li>社区反馈：如遇内容问题，可在评论区提交具体说明</li>' +
+        '</ul>' +
+        '<div class="by-modal-row"><button type="button" class="by-btn by-btn-teal" data-by-submit-confirm>提交意向</button><button type="button" class="by-btn by-btn-ghost" data-by-close>关闭</button></div>'
+      );
+    });
+  }
+  document.addEventListener('click', function(e){
+    var j = e.target.closest ? e.target.closest('[data-by-join-confirm]') : null;
+    if(j){ closeModal(); toast('报名信息已记录，请查看社区消息完成后续步骤'); return; }
+    var s = e.target.closest ? e.target.closest('[data-by-submit-confirm]') : null;
+    if(s){ closeModal(); toast('投稿意向已提交，内容团队会尽快联系你'); return; }
+  });
+
+  /* ---------- 灵感助手 ---------- */
+  var inspireTags = document.getElementById('byInspireTags');
+  var inspireOut = document.getElementById('byInspireOut');
+  if(inspireTags && inspireOut){
+    inspireTags.addEventListener('click', function(e){
+      var btn = e.target.closest ? e.target.closest('button[data-by-idea]') : null;
+      if(!btn) return;
+      var idea = btn.getAttribute('data-by-idea');
+      inspireTags.querySelectorAll('button').forEach(function(b){ b.classList.remove('by-act-on'); });
+      btn.classList.add('by-act-on');
+      var tips = [
+        '开场直接展示整理前的真实状态，不要先摆好再拍。',
+        '在一个镜头内完成一次完整归位，让观看者看到过程。',
+        '结尾记录三个月后的复检结果，这比整理本身更有说服力。'
+      ];
+      inspireOut.innerHTML = '<b style="color:#7fe7e2">拍摄提示：</b>' + idea + '<br><span style="color:#b7bfd0">1. ' + tips[0] + '<br>2. ' + tips[1] + '<br>3. ' + tips[2] + '</span>';
+      toast('已生成选题与拍摄思路');
+    });
+  }
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById('byTopBtn');
+  window.addEventListener('scroll', function(){
+    if(!topBtn) return;
+    if(window.scrollY > 520){ topBtn.classList.add('by-top-show'); }
+    else{ topBtn.classList.remove('by-top-show'); }
+  }, {passive:true});
+  if(topBtn){
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+  /* ---------- 滚动出现动效（轻量） ---------- */
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.style.opacity = '1';
+          en.target.style.transform = 'translateY(0)';
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:0.08});
+    document.querySelectorAll('.by-focus-card, .by-special-card, .by-author-card, .by-review, .by-index-card, .by-comment').forEach(function(el){
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(16px)';
+      el.style.transition = 'opacity .5s ease, transform .5s ease';
+      io.observe(el);
+    });
+  }
+})();
+</script>
+</body>
+                </html>
